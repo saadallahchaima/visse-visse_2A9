@@ -1,6 +1,8 @@
 #include "connection.h"
 #include "mainwindow.h"
 #include <QSqlDatabase>
+//test tutoriel Git
+
 Connection::Connection()
 {
 
