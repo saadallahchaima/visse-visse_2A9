@@ -508,7 +508,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <enum>QTabWidget::Triangular</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="documentMode">
      <bool>true</bool>
@@ -1330,8 +1330,8 @@ color: rgb(0, 0, 0);</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>30</y>
+        <x>320</x>
+        <y>0</y>
         <width>261</width>
         <height>41</height>
        </rect>
@@ -1340,7 +1340,7 @@ color: rgb(0, 0, 0);</string>
        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>Congé</string>
+       <string>demande</string>
       </property>
       <property name="margin">
        <number>50</number>
@@ -1575,35 +1575,12 @@ color: rgb(0, 0, 0);</string>
        <rect>
         <x>560</x>
         <y>260</y>
-        <width>201</width>
+        <width>251</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Liste des Congés</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_10">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>131</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Num congé</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="Le_idC">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>50</y>
-        <width>113</width>
-        <height>25</height>
-       </rect>
+       <string>Liste des demandes</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_c">

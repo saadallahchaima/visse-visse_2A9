@@ -56,8 +56,9 @@ bool supprimer_employe(int);
 QSqlQueryModel * afficher_Listeemploye();
 bool modifier_employe(int ,QString ,QString ,QString ,QString ,QString ,QDate,QDate ,int,int,QString,int);
 bool controle_saisi_emp(employes);
-QSqlQueryModel * rechercher_employes(QString );
+QSqlQueryModel * rechercher_employes(QString);
 QSqlQueryModel * trier_employes();
+bool controle_saisi_email(employes);
 };
 
 #endif // EMPLOYES_H

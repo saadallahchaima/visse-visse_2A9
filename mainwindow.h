@@ -4,8 +4,15 @@
 #include "connection.h"
 #include "employes.h"
 #include "conges.h"
-#include<QDate>
 
+#include<QDate>
+#include <QSoundEffect>
+#include<QtPrintSupport/QPrinter>
+#include<QtPrintSupport/QPrintDialog>
+#include <QSqlTableModel>
+#include <qsystemtrayicon.h>
+#include <QSound>
+#include <QMediaPlayer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,26 +28,18 @@ public:
 
 private slots:
     void on_pushButton_valider_clicked();
-
     void on_pushButton_supp_emp_clicked();
-
    void on_pushButton_2_clicked();
    void on_pushButton_quitter_clicked();
-
-
-
-   void on_creer_accepted();
-
-   //void on_tableView_Affichage_Emp_activated(const QModelIndex &index);
-   
    void on_pushButton_clicked();
-
    void on_pushButton_sort_clicked();
 
 private:
     Ui::MainWindow *ui;
+         QSound *son;
     employes Etmp,aux;
    int aux_emp;
+   int At,Dot;
    QString T;
    conges temp;
 };

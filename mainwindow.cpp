@@ -16,6 +16,8 @@
 #include<QComboBox>
 #include<QFileDialog>
 #include<QTextEdit>
+#include <QSqlRecord>
+#include<QSound>
 #define CARACTERES_ETRANGERS "~{}[]()|-`'^ç@_]\"°01234567890+=£$*µ/§!?,.&#;><"
 
 
@@ -27,8 +29,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tableView_Affichage_Emp->setModel(Etmp.afficher_Listeemploye());
     ui->tableView_2_C->setModel(temp.afficher_ListeConge());
     ui->lineEdit_cin->setValidator(new QIntValidator(0,99999999,this));
+    ui->lineEdit_supp->setValidator(new QIntValidator(0,99999999,this));
      setWindowTitle("Ma super app!");
      QPixmap Pix;
+
+     son=new QSound(":/son/click.mp3");
+
+
 }
 
 MainWindow::~MainWindow()
@@ -39,6 +46,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_valider_clicked()
 {
+     QSound::play(":/son/click.mp3");
+     QMediaPlayer *player = new QMediaPlayer;
+        player->setMedia(QUrl(":/son/click.mp3"));
+        player->play();
 //recuperation des informations saisies dans les champs
 
 int cin=ui->lineEdit_cin->text().toInt();
@@ -57,6 +68,7 @@ int salaire=ui->comboBox_salaire->currentText().toInt();
 
 employes E(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire);
 bool controle=E.controle_saisi_emp(E);
+
   if(controle)
   {
       QMessageBox::critical(nullptr,QObject::tr("attention"),
@@ -86,6 +98,7 @@ else
                  QObject::tr("Ajout non effectué. \n"
                              "click cancel to exit."), QMessageBox::Cancel);
 }
+
 }
 
 void MainWindow::on_pushButton_supp_emp_clicked()
@@ -116,7 +129,10 @@ void MainWindow::on_pushButton_supp_emp_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 
-{   employes aux;
+{  QMediaPlayer *player = new QMediaPlayer;
+    player->setMedia(QUrl("qrc:/click.mp3"));
+    player->play();
+    employes aux;
   aux.setcin(ui->lineEdit_cin->text().toInt());
       aux.setnomprenom(ui->lineEdit_2_nom_et_prenom->text());
    aux.setemail(ui->lineEdit_email->text());
@@ -156,71 +172,9 @@ void MainWindow::on_pushButton_quitter_clicked()
    }
 
 
-void MainWindow::on_creer_accepted()
-{
-    //recuperation des informations saisies dans les champs
-
-    int idC=ui->Le_idC->text().toInt();
-    QDate date_deb=ui->dateTimeEdit_C->date();
-    QDate date_fin=ui->dateTimeEdit_D_C->date();
-    int cin_emp=ui->lineEdit_4_cin->text().toInt();
-    QString nom_emp=ui->Le_nom_emp->text();
-    QString email_emp=ui->Le_email_C->text();
-    QString type_c=ui->comboBox_type_c->currentText();
-    QString cause=ui->lineEdit_c->text();
 
 
 
-
-   conges C( idC,date_deb, date_fin, cin_emp, nom_emp,email_emp, type_c,cause);
-
-    bool test=C.ajouter_conge();
-    if(test)
-    {
-        QMessageBox::information(nullptr,QObject::tr("ok"),
-                                QObject::tr("Ajout effectué \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);
-        ui->tableView_2_C->setModel(temp.afficher_ListeConge());
-
-    }
-    else
-        QMessageBox::critical(nullptr,QObject::tr("Not OK" ),
-                     QObject::tr("Ajout non effectué. \n"
-                                 "click cancel to exit."), QMessageBox::Cancel);
-    }
-
-/*void MainWindow::on_tableView_Affichage_Emp_activated(const QModelIndex &index)
-{
-    QString val=ui->tableView_Affichage_Emp->model()->data(index).toString();
-T=val;
-        QSqlQuery* query=Etmp.afficher_Listeemploye();
-        if(query->exec())
-        {
-            while(query->next())
-            {
-                aux.setcin(ui->lineEdit_cin->text().toInt());
-                    aux.setnomprenom(ui->lineEdit_2_nom_et_prenom->text());
-                 aux.setemail(ui->lineEdit_email->text());
-                aux.setadresse(ui->lineEdit_3_adresse->text());
-                   aux.setprofession(ui->lineEdit_profession->text());
-              aux.setassurance(ui->lineEdit_assurance->text());
-                  aux.setdate_entree(ui->dateEdit_entree->date());
-               aux.setnaissance(ui->dateEdit_naissance->date());
-                   aux.setnombre_enfants(ui->spinBox_enfants->text().toInt());
-                 aux.setcnss(ui->lineEdit_cnss->text().toInt());
-               aux.setnationnalite( ui->comboBox_2_nationnalite->currentText());
-              aux.setsalaire(ui->comboBox_salaire->currentText().toInt());
-
-            }
-    
-            ui->tabWidget->setCurrentIndex(4);
-        }
-        else
-            QMessageBox::critical(nullptr,QObject::tr("echec"),
-                                  QObject::tr("Affichage du service non effectué.\n Taper CANCEL pour quitter"),
-                                  QMessageBox::Cancel  );
-        delete query;
-    }*/
 
 void MainWindow::on_pushButton_clicked()
 {
