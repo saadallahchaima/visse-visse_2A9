@@ -1,5 +1,5 @@
 QT       += core gui sql
-
+QT += widgets multimedia
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = Atelier_Connexion

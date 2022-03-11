@@ -125,19 +125,36 @@ bool employes::controle_saisi_emp(employes E)
   else
       return false;
 }
-QSqlQueryModel * employes::rechercher_employes(QString nomprenom )
+/*bool employes::controle_saisi_email(employes E)
+{
+for (int i = 0;i < email.length(); i++) {
+        // If the character is '@'
+        if ((email[i] == '@')||(email[i] == '.'))
+
+return  true;
+
+else
+
+ return  false;
+
+}
+}
+*/
+QSqlQueryModel * employes::rechercher_employes(QString nom)
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
-            model->setQuery("SELECT * FROM employes WHERE( cin =  cin OR nomprenom='"+nomprenom+"'OR profession='"+profession+"'OR assurance='"+assurance+"' OR nationnalite='"+nationnalite+"')");
+            model->setQuery("select * from employes where ( nomprenom='"+nom+"'OR profession='"+nom+"'OR assurance='"+nom+"' OR nationnalite='"+nom+"');");
             model->setHeaderData(0, Qt::Horizontal, QObject::tr("cin"));
             model->setHeaderData(1, Qt::Horizontal, QObject::tr("nomprenom"));
             model->setHeaderData(2, Qt::Horizontal, QObject::tr("profession"));
             model->setHeaderData(3, Qt::Horizontal, QObject::tr("assurance"));
             model->setHeaderData(4,Qt::Horizontal,QObject::tr("nationnalite"));
+            model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
 
         return model ;
 }
+
 QSqlQueryModel * employes::trier_employes()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
