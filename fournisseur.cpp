@@ -15,6 +15,7 @@ this->numF=numF;
      this->telF=telF;
      this->typeF=typeF;
 }
+
  bool Fournisseur::ajouter()
  {
  QSqlQuery query;

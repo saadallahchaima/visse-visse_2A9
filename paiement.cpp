@@ -27,7 +27,6 @@ QSqlQueryModel * Paiement ::afficheroncomboP()
 bool Paiement::ajouterP()
 {
     QSqlQuery query;
-        //QString id= QString::number(ID);
         query.prepare("INSERT INTO paiement (numF,numFA,Total,date_paiement,idpaiement) "
                             "VALUES (:NUMF, :NUMFA, :TOTAL,:date_paiement ,:idpaiement)");
         query.bindValue(":NUMF",numF);
