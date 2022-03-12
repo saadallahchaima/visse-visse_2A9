@@ -26,6 +26,7 @@ public:
      QSqlQueryModel * afficheroncomboPT();
      QSqlQueryModel *  rechercherP(int);
      bool supprimerP(int);
+
 };
 
 #endif // PAIEMENT_H

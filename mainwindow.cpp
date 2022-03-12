@@ -555,3 +555,8 @@ void MainWindow::on_pushButton_Sup_clicked()
                                     QObject::tr("click cancel to exist"),
                                     QMessageBox::Cancel);
 }
+
+void MainWindow::on_pushButton_Tri_clicked()
+{
+     ui->tableView_facture->setModel(Fa.tri_FA());
+}

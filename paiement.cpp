@@ -98,3 +98,4 @@ QSqlQueryModel * Paiement ::rechercherP(int ID)
     return model;
 }
 
+

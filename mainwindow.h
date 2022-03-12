@@ -63,6 +63,8 @@ private slots:
 
  void on_pushButton_Sup_clicked();
 
+ void on_pushButton_Tri_clicked();
+
 private:
     Ui::MainWindow *ui;
     Fournisseur fo;

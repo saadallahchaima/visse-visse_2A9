@@ -20,6 +20,7 @@ public:
     QSqlQueryModel * afficheroncomboFA();
     bool  rechercher(int id );
      bool supprimerFA(QString);
+     QSqlQueryModel* tri_FA();
 
 };
 

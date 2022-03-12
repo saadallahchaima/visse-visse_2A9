@@ -91,3 +91,22 @@ QSqlQueryModel * FACTURE::afficheroncomboFA() //combo supprimer
 
         return model;
 }
+
+QSqlQueryModel* FACTURE ::tri_FA()
+{
+    QSqlQueryModel* model=new QSqlQueryModel();
+
+
+    model->setQuery("SELECT* FROM FACTURE ORDER BY MONTANT");
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("NUMFA"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("DATE_FACTURE"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("TYPE_FACTURE"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("TVA"));
+    model->setHeaderData(0, Qt::Horizontal, QObject::tr("DESCREPTION"));
+    model->setHeaderData(1, Qt::Horizontal, QObject::tr("EMAIL"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("MONTANT"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("TELEPHONE"));
+    model->setHeaderData(2, Qt::Horizontal, QObject::tr("TRANSPORT"));
+    model->setHeaderData(3, Qt::Horizontal, QObject::tr("TOTAL"));
+    return model;
+}
