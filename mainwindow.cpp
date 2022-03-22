@@ -45,8 +45,27 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_supp->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_cnss->setValidator(new QIntValidator(0,9999,this));
     ui->lineEdit_2_nom_et_prenom->setValidator(new QRegExpValidator( QRegExp("[A-Z..a-z]*") ));
+    son=new QSound(":/img/click2.wav");
     setWindowTitle("Ma super app!");
      QPixmap Pix;
+     QPixmap pic_employe(":/img/téléchargement (2).png");
+
+         QPropertyAnimation *animation2;
+
+         /*int w1=ui->animation_chambre->width();
+         int h1=ui->animation_chambre->height();*/
+         int w2=ui->animation->width();
+         int h2=ui->animation->height();
+
+         ui->animation->setPixmap(pic_employe.scaled(h2,w2,Qt::KeepAspectRatio));
+         animation2 = new QPropertyAnimation(ui->animation, "geometry");
+                     animation2->setDuration(3000);
+                     animation2->setStartValue(ui->animation->geometry());
+                     animation2->setEndValue(QRect(1,197,579,13 ));
+                     animation2->start();
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -599,6 +618,7 @@ void MainWindow::on_pushButton_9_clicked()
     player->setMedia(QUrl("qrc:/img/click.mp3"));
     player->play();
      ui->tabWidget->setCurrentIndex(2);
+      son->play();
 }
 
 void MainWindow::on_pushButton_8_clicked()
@@ -607,6 +627,7 @@ void MainWindow::on_pushButton_8_clicked()
     player->setMedia(QUrl("qrc:/img/click.mp3"));
     player->play();
      ui->tabWidget->setCurrentIndex(4);
+      son->play();
 }
 
 void MainWindow::on_pushButton_10_clicked()
@@ -615,6 +636,7 @@ void MainWindow::on_pushButton_10_clicked()
     player->setMedia(QUrl("qrc:/img/click.mp3"));
     player->play();
      ui->tabWidget->setCurrentIndex(3);
+      son->play();
 }
 
 
@@ -650,12 +672,13 @@ ui->tabWidget->removeTab(4);
                  ui->tabWidget->setCurrentIndex(0);
  }
  }
-
+ son->play();
 }
 
 void MainWindow::on_pushButton_7_clicked()
 {
     close();
+     son->play();
 }
 
 void MainWindow::on_pushButton_11_clicked()
@@ -664,6 +687,7 @@ void MainWindow::on_pushButton_11_clicked()
         styleSheetFile.open(QFile::ReadOnly);
         QString styleSheet = QLatin1String(styleSheetFile.readAll());
         MainWindow::setStyleSheet(styleSheet);
+         son->play();
 }
 void MainWindow::on_pushButton_12_clicked()
 {
@@ -672,6 +696,7 @@ void MainWindow::on_pushButton_12_clicked()
            styleSheetFile.open(QFile::ReadOnly);
            QString styleSheet = QLatin1String(styleSheetFile.readAll());
            MainWindow::setStyleSheet(styleSheet);
+            son->play();
 }
 
 
@@ -684,6 +709,16 @@ void MainWindow::on_pushButton_13_clicked()
                styleSheetFile.open(QFile::ReadOnly);
                QString styleSheet = QLatin1String(styleSheetFile.readAll());
                MainWindow::setStyleSheet(styleSheet);
+ son->play();
 
 
+}
+
+void MainWindow::on_pushButton_14_clicked()
+{
+                   QFile styleSheetFile(":/img/Diplaytap.qss");
+                   styleSheetFile.open(QFile::ReadOnly);
+                   QString styleSheet = QLatin1String(styleSheetFile.readAll());
+                   MainWindow::setStyleSheet(styleSheet);
+                   son->play();
 }

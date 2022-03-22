@@ -188,6 +188,7 @@ void employes::printPDF_employe()
               painter.setFont(font);
               painter.setPen(Qt::red);
               painter.drawText(3000,800 , "Fiche d'employe ");
+              painter.drawImage(QRect(7000, 900, 1000,1000), QImage(":/img/employe.png"));
               painter.setPen(Qt::black);
               painter.drawText(300,1600,"Cin employe : ");
               painter.drawText(300,2200 , "Nom de l'employe : ");
@@ -200,6 +201,7 @@ void employes::printPDF_employe()
               painter.drawText(300,6400,"Nationnalité : ");
               painter.drawText(300,7000,"Adresse : ");
               painter.drawText(300,7600,"Email : ");
+
               painter.setPen(Qt::gray);
               painter.drawText(2000, 1600, this->cin);
               painter.drawText(2600, 2200, this->nomprenom);
@@ -212,6 +214,7 @@ void employes::printPDF_employe()
                 painter.drawText(2000,6400,this->nationnalite);
                  painter.drawText(1800,7000,this->adresse);
                   painter.drawText(1800,7600,this->email);
+
               painter.end();
               msgBox.setIcon(QMessageBox::Information);
               msgBox.setText("A pdf has been created.");
