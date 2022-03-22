@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include<QDate>
+#include<QFile>
 
 int main(int argc, char *argv[])
 {

@@ -219,3 +219,7 @@ void employes::printPDF_employe()
 
 
 }
+void employes::background()
+{
+
+}

@@ -60,7 +60,7 @@ QSqlQueryModel * trier_employes();
 bool controle_saisi_email(employes);
 void printPDF_employe();
 
-
+void background();
 };
 
 #endif // EMPLOYES_H

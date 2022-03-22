@@ -18,5 +18,8 @@
         <file>img/click.mp3</file>
         <file>img/click.wav</file>
         <file>img/click2.wav</file>
+        <file>img/Adaptic.qss</file>
+        <file>img/normal.qss</file>
+        <file>img/Obit.qss</file>
     </qresource>
 </RCC>

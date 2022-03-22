@@ -12,6 +12,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+#include<QFile>
 #include <QMessageBox>
 #include<QDate>
 #include <QPaintEvent>
@@ -655,4 +656,34 @@ ui->tabWidget->removeTab(4);
 void MainWindow::on_pushButton_7_clicked()
 {
     close();
+}
+
+void MainWindow::on_pushButton_11_clicked()
+{     //set the app style sheet
+        QFile styleSheetFile(":/img/Adaptic.qss");
+        styleSheetFile.open(QFile::ReadOnly);
+        QString styleSheet = QLatin1String(styleSheetFile.readAll());
+        MainWindow::setStyleSheet(styleSheet);
+}
+void MainWindow::on_pushButton_12_clicked()
+{
+    //set the app style sheet
+           QFile styleSheetFile(":/img/normal.qss");
+           styleSheetFile.open(QFile::ReadOnly);
+           QString styleSheet = QLatin1String(styleSheetFile.readAll());
+           MainWindow::setStyleSheet(styleSheet);
+}
+
+
+
+void MainWindow::on_pushButton_13_clicked()
+{
+
+        //set the app style sheet
+               QFile styleSheetFile(":/img/Obit.qss");
+               styleSheetFile.open(QFile::ReadOnly);
+               QString styleSheet = QLatin1String(styleSheetFile.readAll());
+               MainWindow::setStyleSheet(styleSheet);
+
+
 }

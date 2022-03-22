@@ -480,9 +480,9 @@ QCheckBox::indicator:disabled, QRadioButton::indicator:disabled
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>-10</y>
       <width>931</width>
-      <height>641</height>
+      <height>651</height>
      </rect>
     </property>
     <property name="mouseTracking">
@@ -536,7 +536,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 170, 127);</string>
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -554,8 +554,8 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">
-color: rgb(0, 0, 0);
+        <string notr="true">color: rgb(255, 255, 255);
+
 font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="text">
@@ -572,7 +572,7 @@ font: 75 11pt &quot;MS Shell Dlg 2&quot;;</string>
         </rect>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(0, 0, 0);</string>
+        <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>Mot de passe</string>
@@ -670,6 +670,45 @@ text-decoration: underline;
         <enum>QFrame::Raised</enum>
        </property>
       </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Theme1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Theme2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>112</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Theme3</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="ajouter">
