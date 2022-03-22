@@ -1,0 +1,13 @@
+INPUT(
+./release\connection.o
+./release\employees.o
+./release\main.o
+./release\mainwindow.o
+./release\mainwindow_stat.o
+./release\pieview.o
+./release\qrc_charts.o
+./release\qrc_ressouces.o
+./release\moc_mainwindow.o
+./release\moc_mainwindow_stat.o
+./release\moc_pieview.o
+);

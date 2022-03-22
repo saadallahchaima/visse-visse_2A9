@@ -1,0 +1,12 @@
+INPUT(
+./debug\congee.o
+./debug\connection.o
+./debug\demande_congee.o
+./debug\employes.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\qcustomplot.o
+./debug\qrc_ressouces.o
+./debug\moc_mainwindow.o
+./debug\moc_qcustomplot.o
+);

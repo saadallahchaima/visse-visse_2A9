@@ -1,0 +1,13 @@
+INPUT(
+./debug\connection.o
+./debug\employees.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\mainwindow_stat.o
+./debug\pieview.o
+./debug\qrc_charts.o
+./debug\qrc_ressouces.o
+./debug\moc_mainwindow.o
+./debug\moc_mainwindow_stat.o
+./debug\moc_pieview.o
+);
