@@ -1,5 +1,6 @@
-QT       += core gui sql
-QT += widgets multimedia
+QT       += core gui sql charts
+QT       += widgets multimedia
+QT       +=printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = Atelier_Connexion
@@ -20,17 +21,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-    conges.cpp \
+    congee.cpp \
     connection.cpp \
+    demande_congee.cpp \
     employes.cpp \
+    login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
-    conges.h \
+    congee.h \
     connection.h \
+    demande_congee.h \
     employes.h \
-    mainwindow.h
+    login.h \
+    mainwindow.h \
+    qcustomplot.h
 
 FORMS += \
     mainwindow.ui

@@ -7,10 +7,15 @@
 #include <QDebug>
 #include <QDate>
 #include <QString>
+#include "qpainter.h"
+#include <QPrinter>
+#include<QPrintDialog>
+#include <QPdfWriter>
+#include<QMessageBox>
 using namespace std;
 employes::employes()
 {
-        cin=0;
+        cin="";
         nomprenom="";
         email="";
         adresse="";
@@ -21,8 +26,9 @@ employes::employes()
         cnss=0;
         nationnalite="";
         salaire=0;
+        num_tele="";
 }
-employes::employes(int cin ,QString nomprenom,QString email,QString adresse,QString profession,QString assurance,QDate date_entree,QDate naissance,int nombre_enfants,int cnss,QString nationnalite,int salaire)
+employes::employes(QString cin ,QString nomprenom,QString email,QString adresse,QString profession,QString assurance,QDate date_entree,QDate naissance,int nombre_enfants,int cnss,QString nationnalite,int salaire,QString num_tele)
 {
     this->cin=cin;
     this->nomprenom=nomprenom;
@@ -36,19 +42,19 @@ employes::employes(int cin ,QString nomprenom,QString email,QString adresse,QStr
     this->cnss=cnss;
     this->nationnalite=nationnalite;
     this->salaire=salaire;
+    this->num_tele=num_tele;
 
 }
 bool employes::ajouter_employe()
 {
  QSqlQuery query;
- QString res = QString::number(cin);
  QString cnss_string = QString::number(cnss);
  QString nombre_enfants_string = QString::number(nombre_enfants);
  QString salaire_string = QString::number(salaire);
 
- query.prepare("insert into employes(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire)""values (:cin,:nomprenom,:email,:adresse,:profession,:assurance,:date_entree,:naissance,:nombre_enfants,:cnss,:nationnalite,:salaire)");
+ query.prepare("insert into employes(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire,num_tele)""values (:cin,:nomprenom,:email,:adresse,:profession,:assurance,:date_entree,:naissance,:nombre_enfants,:cnss,:nationnalite,:salaire,:num_tele)");
 
-query.bindValue(":cin",res);
+query.bindValue(":cin",cin);
 query.bindValue(":nomprenom",nomprenom);
 query.bindValue(":email",email);
 query.bindValue(":adresse",adresse);
@@ -60,6 +66,7 @@ query.bindValue(":nombre_enfants",nombre_enfants_string);
 query.bindValue(":cnss",cnss_string);
 query.bindValue(":nationnalite",nationnalite);
 query.bindValue(":salaire",salaire_string);
+query.bindValue(":num_tele",num_tele);
 
 
    return  query.exec();}
@@ -81,29 +88,28 @@ QSqlQueryModel *  employes::afficher_Listeemploye()
     model->setHeaderData(9,Qt::Horizontal,QObject::tr("cnss"));
     model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
     model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
+    model->setHeaderData(11,Qt::Horizontal,QObject::tr("num_tele"));
 
 
     return model;
 
 }
-bool employes::supprimer_employe(int cin)
+bool employes::supprimer_employe(QString cin)
 {
     QSqlQuery query;
-    QString res=QString::number(cin);
-    query.prepare("delete from employes where Cin=:cin");
-    query.bindValue(":cin",res);
+    query.prepare("delete from employes where cin=:cin");
+    query.bindValue(":cin",cin);
     return  query.exec();
 }
 
-bool employes::modifier_employe(int cin ,QString nomprenom,QString email,QString adresse,QString profession,QString assurance,QDate date_entree,QDate naissance,int nombre_enfants,int cnss,QString nationnalite,int salaire)
+bool employes::modifier_employe(QString cin ,QString nomprenom,QString email,QString adresse,QString profession,QString assurance,QDate date_entree,QDate naissance,int nombre_enfants,int cnss,QString nationnalite,int salaire,QString num_tele)
 {
     QSqlQuery query;
-    QString res = QString::number(cin);
     QString cnss_string = QString::number(cnss);
     QString nombre_enfants_string = QString::number(nombre_enfants);
     QString salaire_string= QString::number(salaire);
-    query.prepare("update employes set cin= :cin,nomprenom= :nomprenom,email= :email,adresse= :adresse,profession= :profession,assurance= :assurance,date_entree= :date_entree,naissance= :naissance,nombre_enfants= :nombre_enfants,cnss= :cnss,nationnalite= :nationnalite ,salaire= :salaire where cin = :cin");
-    query.bindValue(":cin",res);
+    query.prepare("update employes set cin= :cin,nomprenom= :nomprenom,email= :email,adresse= :adresse,profession= :profession,assurance= :assurance,date_entree= :date_entree,naissance= :naissance,nombre_enfants= :nombre_enfants,cnss= :cnss,nationnalite= :nationnalite ,salaire= :salaire,num_tele=:num_tele where cin = :cin");
+    query.bindValue(":cin",cin);
     query.bindValue(":nomprenom",nomprenom);
     query.bindValue(":email",email);
     query.bindValue(":adresse",adresse);
@@ -115,6 +121,7 @@ bool employes::modifier_employe(int cin ,QString nomprenom,QString email,QString
     query.bindValue(":cnss",cnss_string);
     query.bindValue(":nationnalite",nationnalite);
     query.bindValue(":salaire",salaire_string);
+    query.bindValue(":num_tele",num_tele);
 
     return query.exec();
 }
@@ -125,33 +132,25 @@ bool employes::controle_saisi_emp(employes E)
   else
       return false;
 }
-/*bool employes::controle_saisi_email(employes E)
-{
-for (int i = 0;i < email.length(); i++) {
-        // If the character is '@'
-        if ((email[i] == '@')||(email[i] == '.'))
 
-return  true;
-
-else
-
- return  false;
-
-}
-}
-*/
 QSqlQueryModel * employes::rechercher_employes(QString nom)
 {
     QSqlQueryModel * model= new QSqlQueryModel();
 
             model->setQuery("select * from employes where ( nomprenom='"+nom+"'OR profession='"+nom+"'OR assurance='"+nom+"' OR nationnalite='"+nom+"');");
-            model->setHeaderData(0, Qt::Horizontal, QObject::tr("cin"));
-            model->setHeaderData(1, Qt::Horizontal, QObject::tr("nomprenom"));
-            model->setHeaderData(2, Qt::Horizontal, QObject::tr("profession"));
-            model->setHeaderData(3, Qt::Horizontal, QObject::tr("assurance"));
-            model->setHeaderData(4,Qt::Horizontal,QObject::tr("nationnalite"));
-            model->setHeaderData(5,Qt::Horizontal,QObject::tr("salaire"));
-
+            model->setHeaderData(0,Qt::Horizontal,QObject::tr("cin"));
+            model->setHeaderData(1,Qt::Horizontal,QObject::tr("nomprenom"));
+            model->setHeaderData(2,Qt::Horizontal,QObject::tr("email"));
+            model->setHeaderData(3,Qt::Horizontal,QObject::tr("adresse"));
+            model->setHeaderData(4,Qt::Horizontal,QObject::tr("profession"));
+            model->setHeaderData(5,Qt::Horizontal,QObject::tr("assurance"));
+            model->setHeaderData(6,Qt::Horizontal,QObject::tr("date_entree"));
+            model->setHeaderData(7,Qt::Horizontal,QObject::tr("naissance"));
+            model->setHeaderData(8,Qt::Horizontal,QObject::tr("nombre_enfants"));
+            model->setHeaderData(9,Qt::Horizontal,QObject::tr("cnss"));
+            model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
+            model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
+             model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
         return model ;
 }
 
@@ -161,10 +160,62 @@ QSqlQueryModel * employes::trier_employes()
 
     model->setQuery("SELECT * FROM employes ORDER BY salaire desc ;");
 
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("cin"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("nomprenom"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("profession"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("salaire"));
-    model->setHeaderData(4,Qt::Horizontal,QObject::tr("nationnalite"));
+    model->setHeaderData(0,Qt::Horizontal,QObject::tr("cin"));
+    model->setHeaderData(1,Qt::Horizontal,QObject::tr("nomprenom"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("email"));
+    model->setHeaderData(3,Qt::Horizontal,QObject::tr("adresse"));
+    model->setHeaderData(4,Qt::Horizontal,QObject::tr("profession"));
+    model->setHeaderData(5,Qt::Horizontal,QObject::tr("assurance"));
+    model->setHeaderData(6,Qt::Horizontal,QObject::tr("date_entree"));
+    model->setHeaderData(7,Qt::Horizontal,QObject::tr("naissance"));
+    model->setHeaderData(8,Qt::Horizontal,QObject::tr("nombre_enfants"));
+    model->setHeaderData(9,Qt::Horizontal,QObject::tr("cnss"));
+    model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
+    model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
+     model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
     return model;
+}
+void employes::printPDF_employe()
+{QPdfWriter pdf("C:/Users/saada/OneDrive/Bureau/gestion_des_employes/print_employe.pdf");
+    QPainter painter(&pdf);
+    QFont font=painter.font();
+    QMessageBox msgBox;
+    QString res1=QString::number(nombre_enfants);
+      QString res2=QString::number(cnss);
+        QString res3=QString::number(salaire);
+
+       font.setPointSize(font.pointSize() * 2);
+              painter.setFont(font);
+              painter.setPen(Qt::red);
+              painter.drawText(3000,800 , "Fiche d'employe ");
+              painter.setPen(Qt::black);
+              painter.drawText(300,1600,"Cin employe : ");
+              painter.drawText(300,2200 , "Nom de l'employe : ");
+              painter.drawText(300,2800,"Numero de Telephone : ");
+              painter.drawText(300,3400, "Profession : ");
+              painter.drawText(300, 4000, "Nombre d'enfants : ");
+              painter.drawText(300, 4600, "Num cnss : ");
+              painter.drawText(300,5200,"Assurance : ");
+              painter.drawText(300,5800,"salaire : ");
+              painter.drawText(300,6400,"Nationnalité : ");
+              painter.drawText(300,7000,"Adresse : ");
+              painter.drawText(300,7600,"Email : ");
+              painter.setPen(Qt::gray);
+              painter.drawText(2000, 1600, this->cin);
+              painter.drawText(2600, 2200, this->nomprenom);
+              painter.drawText(3200, 2800, this->num_tele);
+              painter.drawText(1800, 3400, this->profession);
+              painter.drawText(2800, 4000, res1);
+               painter.drawText(1800, 4600, res2);
+              painter.drawText(1800,5200,this->assurance);
+               painter.drawText(2000,5800,res3);
+                painter.drawText(2000,6400,this->nationnalite);
+                 painter.drawText(1800,7000,this->adresse);
+                  painter.drawText(1800,7600,this->email);
+              painter.end();
+              msgBox.setIcon(QMessageBox::Information);
+              msgBox.setText("A pdf has been created.");
+              msgBox.exec();
+
+
 }
