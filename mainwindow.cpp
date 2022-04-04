@@ -12,7 +12,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-#include<QFile>
+#include<QFile>   
 #include <QMessageBox>
 #include<QDate>
 #include <QPaintEvent>
@@ -40,6 +40,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setGeometry(100,100,500,600);// place la fenêtre aux coordonnés : 100px,100px
+                 // largeur fixée à 500px et hauteur à 600px
     ui->tableView_Affichage_Emp->setModel(Etmp.afficher_Listeemploye());
     ui->lineEdit_cin->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_supp->setValidator(new QIntValidator(0,99999999,this));
@@ -51,9 +53,6 @@ MainWindow::MainWindow(QWidget *parent)
      QPixmap pic_employe(":/img/téléchargement (2).png");
 
          QPropertyAnimation *animation2;
-
-         /*int w1=ui->animation_chambre->width();
-         int h1=ui->animation_chambre->height();*/
          int w2=ui->animation->width();
          int h2=ui->animation->height();
 
@@ -77,9 +76,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_valider_clicked()
 {
 
-     QMediaPlayer *player = new QMediaPlayer;
-        player->setMedia(QUrl("qrc:/img/click.mp3"));
-        player->play();
+ son->play();
 //recuperation des informations saisies dans les champs
 
 QString cin=ui->lineEdit_cin->text();
@@ -460,7 +457,7 @@ void MainWindow::on_tableView_2_C_2_activated(const QModelIndex &index)
             ui->le_fonction->setText(query.value(6).toString());
             ui->dateTimeEdit_date_demande->setDate(query.value(7).toDate());
             ui->le_reponse->setText(query.value(9).toString());
-             ui->lineEdit_cause->setText(query.value(10).toString());
+            ui->lineEdit_cause->setText(query.value(10).toString());
             ui->lineEdit_autoriser->setText(query.value(5).toString());
         }
 
@@ -564,78 +561,62 @@ slice->setBrush(Qt::green);
 }
 void MainWindow::on_pushButton_stat_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
+   son->play();
      statistiques();
-     ui->tabWidget->setCurrentIndex(4);
+     ui->tabWidget->setCurrentIndex(3);
 }
 
 void MainWindow::on_pushButton_5_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
-    ui->tabWidget->setCurrentIndex(0);
+
+     son->play();
+    ui->tabWidget->setCurrentIndex(1);
 }
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
-    ui->tabWidget->setCurrentIndex(2);
+
+    son->play();
+    ui->tabWidget->setCurrentIndex(3);
 }
 
 void MainWindow::on_pushButton_6_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
-    ui->tabWidget->setCurrentIndex(1);
+   son->play();
+    ui->tabWidget->setCurrentIndex(2);
 }
 
 void MainWindow::on_pushButton_preced_D_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
-    ui->tabWidget->setCurrentIndex(1);
+
+     son->play();
+    ui->tabWidget->setCurrentIndex(5);
 
 }
 
 void MainWindow::on_pushButton_apres_D_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
-    ui->tabWidget->setCurrentIndex(3);
+   son->play();
+    ui->tabWidget->setCurrentIndex(5);
 }
 
 void MainWindow::on_pushButton_9_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
-     ui->tabWidget->setCurrentIndex(2);
+     ui->tabWidget->setCurrentIndex(4);
       son->play();
 }
 
 void MainWindow::on_pushButton_8_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
-     ui->tabWidget->setCurrentIndex(4);
+
+     ui->tabWidget->setCurrentIndex(1);
       son->play();
 }
 
 void MainWindow::on_pushButton_10_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
-     ui->tabWidget->setCurrentIndex(3);
+
+     ui->tabWidget->setCurrentIndex(2);
       son->play();
 }
 
@@ -721,4 +702,20 @@ void MainWindow::on_pushButton_14_clicked()
                    QString styleSheet = QLatin1String(styleSheetFile.readAll());
                    MainWindow::setStyleSheet(styleSheet);
                    son->play();
+}
+
+void MainWindow::on_pushButton_15_clicked()
+{
+     ui->tabWidget->setCurrentIndex(4);
+      son->play();
+}
+
+void MainWindow::on_commandLinkButton_clicked()
+{
+    QFile styleSheetFile(":/img/Diplaytap.qss");
+    styleSheetFile.open(QFile::ReadOnly);
+    QString styleSheet = QLatin1String(styleSheetFile.readAll());
+    MainWindow::setStyleSheet(styleSheet);
+    son->play();
+
 }

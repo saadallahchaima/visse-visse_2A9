@@ -12,6 +12,7 @@
 #include<QPrintDialog>
 #include <QPdfWriter>
 #include<QMessageBox>
+#include<qfile.h>
 using namespace std;
 employes::employes()
 {

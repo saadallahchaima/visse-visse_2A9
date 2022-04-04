@@ -45,19 +45,11 @@ private slots:
 
    void on_tableView_Affichage_Emp_activated(const QModelIndex &index);
 
-
-
    void on_tableView_2_C_activated(const QModelIndex &index);
 
    void on_tableView_2_C_2_activated(const QModelIndex &index);
 
-
-
-
-
    void on_pushButton_print_3_clicked();
-
-
 
    void on_pushButton_printPDF_demande_clicked();
 
@@ -65,7 +57,6 @@ private slots:
 
    void on_pushButton_sort_demande_refusees_clicked();
    void statistiques();
-
    void on_pushButton_stat_clicked();
 
    void on_pushButton_5_clicked();
@@ -96,6 +87,11 @@ private slots:
    void on_pushButton_13_clicked();
 
    void on_pushButton_14_clicked();
+
+   void on_pushButton_15_clicked();
+
+
+   void on_commandLinkButton_clicked();
 
 private:
     Ui::MainWindow *ui;
