@@ -12,6 +12,8 @@
 #include<QPrintDialog>
 #include <QPdfWriter>
 #include<QMessageBox>
+#include<QFile>
+#include<QFileDevice>
 #include<qfile.h>
 using namespace std;
 employes::employes()
@@ -151,7 +153,7 @@ QSqlQueryModel * employes::rechercher_employes(QString nom)
             model->setHeaderData(9,Qt::Horizontal,QObject::tr("cnss"));
             model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
             model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
-             model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
+            model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
         return model ;
 }
 
@@ -173,7 +175,7 @@ QSqlQueryModel * employes::trier_employes()
     model->setHeaderData(9,Qt::Horizontal,QObject::tr("cnss"));
     model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
     model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
-     model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
+    model->setHeaderData(12,Qt::Horizontal,QObject::tr("num_tele"));
     return model;
 }
 void employes::printPDF_employe()
@@ -182,8 +184,13 @@ void employes::printPDF_employe()
     QFont font=painter.font();
     QMessageBox msgBox;
     QString res1=QString::number(nombre_enfants);
-      QString res2=QString::number(cnss);
-        QString res3=QString::number(salaire);
+    QString res2=QString::number(cnss);
+    QString res3=QString::number(salaire);
+    QDate naissance =naissance.currentDate() ;
+     QString Datee = naissance.toString() ;
+
+     QDate date_entree =date_entree.currentDate() ;
+      QString Dateee = date_entree.toString() ;
 
        font.setPointSize(font.pointSize() * 2);
               painter.setFont(font);
@@ -202,6 +209,9 @@ void employes::printPDF_employe()
               painter.drawText(300,6400,"Nationnalité : ");
               painter.drawText(300,7000,"Adresse : ");
               painter.drawText(300,7600,"Email : ");
+               painter.drawText(300,8200,"Naissance");
+               painter.drawText(300,8800,"date d'entrée");
+
 
               painter.setPen(Qt::gray);
               painter.drawText(2000, 1600, this->cin);
@@ -209,21 +219,19 @@ void employes::printPDF_employe()
               painter.drawText(3200, 2800, this->num_tele);
               painter.drawText(1800, 3400, this->profession);
               painter.drawText(2800, 4000, res1);
-               painter.drawText(1800, 4600, res2);
+              painter.drawText(1800, 4600, res2);
               painter.drawText(1800,5200,this->assurance);
-               painter.drawText(2000,5800,res3);
-                painter.drawText(2000,6400,this->nationnalite);
-                 painter.drawText(1800,7000,this->adresse);
-                  painter.drawText(1800,7600,this->email);
+              painter.drawText(2000,5800,res3);
+              painter.drawText(2000,6400,this->nationnalite);
+              painter.drawText(1800,7000,this->adresse);
+              painter.drawText(1800,7600,this->email);
+              painter.drawText(1800,8200,Datee);
+              painter.drawText(2000,8800,Dateee);
 
               painter.end();
               msgBox.setIcon(QMessageBox::Information);
               msgBox.setText("A pdf has been created.");
               msgBox.exec();
 
-
-}
-void employes::background()
-{
 
 }

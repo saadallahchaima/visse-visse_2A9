@@ -5,6 +5,8 @@
 #include <QMessageBox>
 #include<QDate>
 #include<QFile>
+#include<QTranslator>
+#include<QInputDialog>
 
 int main(int argc, char *argv[])
 {
@@ -12,6 +14,22 @@ int main(int argc, char *argv[])
     Connection c;
 
     bool test=c.createconnect();
+    //*****************
+
+
+    QTranslator t;
+         QTranslator guiTranslator;
+        QStringList languages;
+        languages <<"Frensh"<<"English";
+        QString lang = QInputDialog::getItem(NULL,"select Language",
+                                             "Language",languages);
+        if(lang=="English")
+        {
+            t.load(":/english.qm");
+            a.installTranslator(&t);
+        }
+
+    //*************
  MainWindow w;
 
 

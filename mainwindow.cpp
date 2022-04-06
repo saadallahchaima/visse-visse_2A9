@@ -710,12 +710,76 @@ void MainWindow::on_pushButton_15_clicked()
       son->play();
 }
 
-void MainWindow::on_commandLinkButton_clicked()
+
+void MainWindow::on_traduction_push_clicked()
 {
-    QFile styleSheetFile(":/img/Diplaytap.qss");
-    styleSheetFile.open(QFile::ReadOnly);
-    QString styleSheet = QLatin1String(styleSheetFile.readAll());
-    MainWindow::setStyleSheet(styleSheet);
-    son->play();
+    ui->label->setText("Add an Employe");
+    ui->cin->setText("ID");
+    ui->nomprenom->setText("First and last name");
+    ui->Nationnalite->setText("Nationnality");
+    ui->adresse->setText("Adress");
+    ui->profession->setText("Job");
+    ui->Naissance->setText("Birth");
+    ui->cnss->setText("cnss");
+    ui->nombre_enfants->setText("number of children");
+    ui->label_email->setText("email");
+    ui->assurance->setText("assurance");
+    ui->date_entree->setText("entry date");
+    ui->salaire->setText("salary");
+    ui->label_8->setText("phone_number");
+    ui->label_sort->setText("sort");
+    ui->label_5->setText("Display the list of employees");
+    ui->label_4->setText("ID");
+    ui->label_date_demande->setText("request date");
+    ui->label_6->setText("reply");
+    ui->le_reponse->setText("waiting");
+    ui->label_nom_emp->setText("name of employe");
+    ui->label_tele_2->setText("phone number");
+    ui->label_debut->setText("start");
+    ui->label_fin->setText("end");
+    ui->label_cin_emp->setText("ID");
+    ui->label_fonctio->setText("Job");
+    ui->label_natureC->setText("nature leave");
+    ui->comboBox_type_c->setCurrentText("sick,maternity");
+    ui->label_9->setText("Name");
+    ui->label_10->setText("pass word");
+    ui->label_supp_demande->setText("ID");
+    ui->label_2->setText("request");
+}
+
+void MainWindow::on_pushButton_16_clicked()
+{
+    ui->label->setText("Ajouter un employe");
+    ui->cin->setText("cin");
+    ui->nomprenom->setText("Nom et prenom");
+    ui->Nationnalite->setText("Nationnalite");
+    ui->adresse->setText("Adresse");
+    ui->profession->setText("Profession");
+    ui->Naissance->setText("Naissance");
+    ui->cnss->setText("cnss");
+    ui->nombre_enfants->setText("nombre d'enfant");
+    ui->label_email->setText("email");
+    ui->assurance->setText("assurance");
+    ui->date_entree->setText("date d'entree");
+    ui->salaire->setText("salaire");
+    ui->label_8->setText("numero de telephone");
+    ui->label_sort->setText("trier");
+    ui->label_5->setText("Afficher la liste des employes");
+    ui->label_4->setText("cin");
+    ui->label_date_demande->setText("date de demande");
+    ui->label_6->setText("repondre");
+    ui->le_reponse->setText("en attente");
+    ui->label_nom_emp->setText("nom de l'employe");
+    ui->label_tele_2->setText("num tele");
+    ui->label_debut->setText("debut");
+    ui->label_fin->setText("Fin");
+    ui->label_cin_emp->setText("cin");
+    ui->label_fonctio->setText("profession");
+    ui->label_natureC->setText("nature de congé");
+    ui->comboBox_type_c->setCurrentText("maladie");
+    ui->label_9->setText("Nom");
+    ui->label_10->setText("Mot de passe");
+    ui->label_supp_demande->setText("cin");
+    ui->label_2->setText("demande");
 
 }
