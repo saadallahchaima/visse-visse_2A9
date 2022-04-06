@@ -33,5 +33,9 @@
         <file>img/images (1).png</file>
         <file>img/ang.png</file>
         <file>img/france.png</file>
+        <file>img/icon.jpg</file>
+        <file>img/welcome-emoji.gif</file>
+        <file>img/hello2.jpg</file>
+        <file>img/hello.jpg</file>
     </qresource>
 </RCC>

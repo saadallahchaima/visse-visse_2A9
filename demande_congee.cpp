@@ -192,6 +192,12 @@ QSqlQueryModel * demande_congee::trier_date_demande()
 }
 void demande_congee::printPDF_demande()
 {
+    QDate date_demande =date_demande.currentDate() ;
+     QString Dateee = date_demande.toString() ;
+     QDate date_depart_conge =date_depart_conge.currentDate() ;
+      QString Datee = date_depart_conge.toString() ;
+      QDate date_retour_conge =date_retour_conge.currentDate() ;
+       QString Dateeee = date_retour_conge.toString() ;
 
     QPdfWriter pdf("C:/Users/saada/OneDrive/Bureau/gestion_des_employes/print_demande.pdf");
     QPainter painter(&pdf);
@@ -209,14 +215,20 @@ void demande_congee::printPDF_demande()
               painter.drawText(300, 4000, "Nature du conge : ");
               painter.drawText(300, 4600, "Cause : ");
               painter.drawText(300,5200,"Reponse : ");
+              painter.drawText(300,5800,"date demande : ");
+              painter.drawText(300,6200,"date depart conge : ");
+              painter.drawText(300,6800,"date retour : ");
               painter.setPen(Qt::gray);
               painter.drawText(2000, 1600, this->cin_employe);
               painter.drawText(2600, 2200, this->nom_employes);
               painter.drawText(3200, 2800, this->num_tele_employes);
               painter.drawText(1800, 3400, this->fonction_employe);
               painter.drawText(2500, 4000, this->nature_conges);
-               painter.drawText(1800, 4600, this->cause);
+              painter.drawText(1800, 4600, this->cause);
               painter.drawText(1800,5200,this->reponse);
+              painter.drawText(2700,5800,Datee);
+              painter.drawText(2700,6200,Dateee);
+              painter.drawText(2300,6800,Dateeee);
               painter.end();
               msgBox.setIcon(QMessageBox::Information);
               msgBox.setText("A pdf has been created.");

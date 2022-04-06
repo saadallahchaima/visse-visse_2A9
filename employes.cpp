@@ -15,6 +15,7 @@
 #include<QFile>
 #include<QFileDevice>
 #include<qfile.h>
+#include<QImage>
 using namespace std;
 employes::employes()
 {
@@ -30,6 +31,8 @@ employes::employes()
         nationnalite="";
         salaire=0;
         num_tele="";
+
+
 }
 employes::employes(QString cin ,QString nomprenom,QString email,QString adresse,QString profession,QString assurance,QDate date_entree,QDate naissance,int nombre_enfants,int cnss,QString nationnalite,int salaire,QString num_tele)
 {
@@ -47,6 +50,8 @@ employes::employes(QString cin ,QString nomprenom,QString email,QString adresse,
     this->salaire=salaire;
     this->num_tele=num_tele;
 
+
+
 }
 bool employes::ajouter_employe()
 {
@@ -54,6 +59,8 @@ bool employes::ajouter_employe()
  QString cnss_string = QString::number(cnss);
  QString nombre_enfants_string = QString::number(nombre_enfants);
  QString salaire_string = QString::number(salaire);
+
+
 
  query.prepare("insert into employes(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire,num_tele)""values (:cin,:nomprenom,:email,:adresse,:profession,:assurance,:date_entree,:naissance,:nombre_enfants,:cnss,:nationnalite,:salaire,:num_tele)");
 
@@ -70,6 +77,7 @@ query.bindValue(":cnss",cnss_string);
 query.bindValue(":nationnalite",nationnalite);
 query.bindValue(":salaire",salaire_string);
 query.bindValue(":num_tele",num_tele);
+
 
 
    return  query.exec();}
@@ -92,6 +100,7 @@ QSqlQueryModel *  employes::afficher_Listeemploye()
     model->setHeaderData(10,Qt::Horizontal,QObject::tr("salaire"));
     model->setHeaderData(11,Qt::Horizontal,QObject::tr("nationnalite"));
     model->setHeaderData(11,Qt::Horizontal,QObject::tr("num_tele"));
+
 
 
     return model;

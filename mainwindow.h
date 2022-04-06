@@ -91,9 +91,12 @@ private slots:
    void on_pushButton_15_clicked();
 
 
-   void on_traduction_push_clicked();
+  // void on_traduction_push_clicked();
 
-   void on_pushButton_16_clicked();
+  // void on_pushButton_16_clicked();
+
+
+   void on_commandLinkButton_theme_clicked();
 
 private:
     Ui::MainWindow *ui;

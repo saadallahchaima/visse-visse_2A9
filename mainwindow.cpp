@@ -16,6 +16,7 @@
 #include <QMessageBox>
 #include<QDate>
 #include <QPaintEvent>
+#include<QPainter>
 #include <QPixmap>
 #include<QComboBox>
 #include<QFileDialog>
@@ -32,6 +33,7 @@
 #include<QSoundEffect>
 #include<QMediaPlayer>
 #include<QMediaPlaylist>
+
 #define CARACTERES_ETRANGERS "~{}[]()|-`'^ç@_]\"°01234567890+=£$*µ/§!?,.&#;><"
 
 
@@ -50,7 +52,7 @@ MainWindow::MainWindow(QWidget *parent)
     son=new QSound(":/img/click2.wav");
     setWindowTitle("Ma super app!");
      QPixmap Pix;
-     QPixmap pic_employe(":/img/téléchargement (2).png");
+     QPixmap pic_employe(":/img/hello.jpg");
 
          QPropertyAnimation *animation2;
          int w2=ui->animation->width();
@@ -60,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
          animation2 = new QPropertyAnimation(ui->animation, "geometry");
                      animation2->setDuration(3000);
                      animation2->setStartValue(ui->animation->geometry());
-                     animation2->setEndValue(QRect(1,197,579,13 ));
+                     animation2->setEndValue(QRect(1,350,579,80 ));
                      animation2->start();
 
 
@@ -484,6 +486,8 @@ void MainWindow::on_pushButton_print_3_clicked()
         QString num_tele=ui->lineEdit_num_tele->text();
 
 
+
+
         employes E(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire,num_tele);
       E.printPDF_employe();
 }
@@ -545,11 +549,11 @@ void MainWindow::statistiques()
 
            QChart *chart = new QChart();
            chart->addSeries(series);
-           chart->setTitle("statistiques des professions dans l'entreprise");
+chart->setTitle("statistiques des professions dans l'entreprise");
 series->append("ingenieurs", 80);
 series->append("Ouvriers", 70);
 series->append("Personnels", 50);
-QPieSlice *slice = series->slices().at(1);
+QPieSlice *slice = series->slices().at(2);
 slice->setExploded(true);
 slice->setLabelVisible(true);
 slice->setPen(QPen(Qt::darkGreen, 2));
@@ -711,7 +715,7 @@ void MainWindow::on_pushButton_15_clicked()
 }
 
 
-void MainWindow::on_traduction_push_clicked()
+/*void MainWindow::on_traduction_push_clicked()
 {
     ui->label->setText("Add an Employe");
     ui->cin->setText("ID");
@@ -781,5 +785,45 @@ void MainWindow::on_pushButton_16_clicked()
     ui->label_10->setText("Mot de passe");
     ui->label_supp_demande->setText("cin");
     ui->label_2->setText("demande");
+
+}*/
+
+
+
+void MainWindow::on_commandLinkButton_theme_clicked()
+{
+    QString T=ui->commandLinkButton_theme->text() ;
+
+
+
+               if (T == "Theme1")
+               { QFile styleSheetFile(":/img/Diplaytap.qss");
+                   styleSheetFile.open(QFile::ReadOnly);
+                   QString styleSheet = QLatin1String(styleSheetFile.readAll());
+                   MainWindow::setStyleSheet(styleSheet);
+                   ui->commandLinkButton_theme->setText("Theme2");
+               }
+               if(T=="Theme2")
+               {   QFile styleSheetFile(":/img/Obit.qss");
+                   styleSheetFile.open(QFile::ReadOnly);
+                   QString styleSheet = QLatin1String(styleSheetFile.readAll());
+                   MainWindow::setStyleSheet(styleSheet);
+                    ui->commandLinkButton_theme->setText("Theme3");
+               }
+if(T=="Theme3")
+{//set the app style sheet
+    QFile styleSheetFile(":/img/normal.qss");
+    styleSheetFile.open(QFile::ReadOnly);
+    QString styleSheet = QLatin1String(styleSheetFile.readAll());
+    MainWindow::setStyleSheet(styleSheet);
+     ui->commandLinkButton_theme->setText("Theme4");
+}
+    if(T=="Theme 4")
+    {//set the app style sheet
+        QFile styleSheetFile(":/img/Adaptic.qss");
+        styleSheetFile.open(QFile::ReadOnly);
+        QString styleSheet = QLatin1String(styleSheetFile.readAll());
+        MainWindow::setStyleSheet(styleSheet);
+       }
 
 }
