@@ -1,6 +1,27 @@
 QT       += core gui charts
 QT += sql
+QT += printsupport
+QT += gui
+QT += core gui network
 
+QT += core gui charts
+QT += core
+
+QT       += core gui charts sql  multimedia multimediawidgets printsupport charts serialport
+
+QT += core gui printsupport
+
+QT += sql
+
+QT += multimedia
+Qt += charts
+
+SUBDIRS += \
+    widget \
+    quickitem \
+    lib
+CONFIG+=qaxcontainer
+QT += axcontainer
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -18,6 +39,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     connexion.cpp \
+    excelexporthelper.cpp \
     facture.cpp \
     fournisseur.cpp \
     main.cpp \
@@ -26,6 +48,7 @@ SOURCES += \
 
 HEADERS += \
     connexion.h \
+    excelexporthelper.h \
     facture.h \
     fournisseur.h \
     mainwindow.h \
@@ -33,8 +56,32 @@ HEADERS += \
 
 FORMS += \
     mainwindow.ui
-
+include({PAHT_TO_LIB}../defaults.pri)
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Excel/Facture.xlsx \
+    Pictures/Addition.png \
+    Pictures/Aqua.qss \
+    Pictures/Clear.png \
+    Pictures/Error.jpg \
+    Pictures/Filmovio.qss \
+    Pictures/Fr.png \
+    Pictures/MacOS.qss \
+    Pictures/PDF.jpg \
+    Pictures/Payments.png \
+    Pictures/Remove.png \
+    Pictures/Russe.png \
+    Pictures/Search.png \
+    Pictures/Stat.png \
+    Pictures/Tri.png \
+    Pictures/Update.jpg \
+    Pictures/english.png \
+    Pictures/logo.jpg \
+    Pictures/not.png
+
+RESOURCES += \
+    Resources.qrc

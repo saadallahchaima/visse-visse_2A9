@@ -12,20 +12,23 @@ class Paiement
 {
 public:
 
-    int numF,numFA,Total,idpaiement;
-    QString date_paiement;
+    int numF,numFA,idpaiement;
+    QString date_paiement,PAYMENT_VALIDATION,Total;
 
 public:
     Paiement();
-    Paiement(int,int,int,QString,int);
+    Paiement(int,int,QString,QString,int,QString);
 
      bool ajouterP();
      QSqlQueryModel * afficherP();
-     bool modifierP(int,int,int,QString,int);
+     bool modifierP(QString,int);
      QSqlQueryModel * afficheroncomboP();
      QSqlQueryModel * afficheroncomboPT();
      QSqlQueryModel *  rechercherP(int);
      bool supprimerP(int);
+     QSqlQueryModel* tri_Pa();
+     void Statistique_Pa();
+
 
 };
 

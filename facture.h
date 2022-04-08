@@ -18,9 +18,14 @@ public:
     QSqlQueryModel * afficherFA();
     bool modifierFA(int,QString,QString,QString,QString,QString,int,int,QString,int);
     QSqlQueryModel * afficheroncomboFA();
-    bool  rechercher(int id );
+    QSqlQueryModel * rechercher_FA(QString Email);
      bool supprimerFA(QString);
-     QSqlQueryModel* tri_FA();
+     QSqlQueryModel* tri_FA(QString Choice);
+     QSqlQueryModel *afficheroncombo_Mail_FA();
+     void Statistique_Fa();
+
+
+
 
 };
 

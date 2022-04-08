@@ -1,2 +1,15 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>Pictures/Filmovio.qss</file>
+        <file>Pictures/Chatbee.qss</file>
+        <file>Pictures/Scalcula.qss</file>
+        <file>Pictures/Clocker.qss</file>
+        <file>Excel/Facture.xlsx</file>
+        <file>Pictures/MacOS.qss</file>
+        <file>Pictures/Aqua.qss</file>
+        <file>Pictures/SyNet.qss</file>
+        <file>Pictures/Perstfic.qss</file>
+        <file>Pictures/Dtor.qss</file>
+        <file>Pictures/Diffnes.qss</file>
+    </qresource>
+</RCC>

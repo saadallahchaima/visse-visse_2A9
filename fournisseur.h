@@ -3,7 +3,12 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+#include<QDate>
+#include <QPainter>
+#include <QPdfWriter>
+#include <QPrinter>
+#include <QDesktopServices>
+#include <QLabel>
 class Fournisseur
 {
     int telF,numF;
@@ -20,6 +25,8 @@ public:
      bool  rechercher(int id  );
      bool supprimer(int);
      QSqlQueryModel* recherche(QString Nom);
+     QSqlQueryModel* tri_Fo();
+     void Generer_PDF();
 };
 
 

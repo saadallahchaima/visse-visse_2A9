@@ -1,0 +1,561 @@
+*************History*************
+
+2022-04-01  04:31:36   -Modification de la langue vers le Francais
+ 
+2022-04-01  04:58:42   -Affichage de statistique 
+2022-04-01  04:58:43   -Tri  Paiement   
+2022-04-01  05:02:34   -Affichage de statistique 
+2022-04-01  05:02:42   -Tri  Paiement   
+2022-04-01  05:08:21   -Affichage de statistique 
+2022-04-01  05:08:22   -Tri  Paiement   
+2022-04-01  05:20:02   -Modification de la langue vers le Francais
+2022-04-01  05:20:04   -Modification de la langue vers le Russe
+2022-04-01  05:20:06   -Modification de la langue vers l'Anglais
+2022-04-01  05:20:06   -Affichage de statistique 
+2022-04-01  05:20:08   -Tri  Paiement   
+2022-04-02  11:45:41   -Ajout du paiement Numero : 1023
+2022-04-02  11:49:14   -Ajout du paiement Numero : 1200
+2022-04-02  11:53:06   -Ajout du paiement Numero : 203
+2022-04-02  11:54:50   -Suppresion Du paiement : 1023
+2022-04-02  11:54:57   -Ajout du paiement Numero : 120
+2022-04-02  11:56:08   -Suppresion Du paiement : 1023
+2022-04-02  11:56:15   -Ajout du paiement Numero : 551
+2022-04-02  12:00:03   -Suppresion Du paiement : 1023
+2022-04-02  12:00:12   -Ajout du paiement Numero : 1459
+2022-04-02  12:00:45   -Tri  Paiement   
+2022-04-02  12:00:55   -Suppresion Du paiement : 1200
+2022-04-02  12:00:56   -Suppresion Du paiement : 1200
+2022-04-02  12:01:01   -Tri  Paiement   
+2022-04-02  12:02:55   -Ajout du paiement Numero : 369
+2022-04-02  12:03:04   -Tri  Paiement   
+2022-04-02  12:08:47   -Ajout du paiement Numero : 1002
+2022-04-02  12:12:48   -Tri  Paiement   
+2022-04-02  12:12:49   -Suppresion Du paiement : 
+2022-04-02  12:12:51   -Suppresion Du paiement : 
+2022-04-02  12:12:53   -Suppresion Du paiement : 
+2022-04-02  12:12:55   -Suppresion Du paiement : 
+2022-04-02  12:12:57   -Suppresion Du paiement : 
+2022-04-02  12:12:59   -Suppresion Du paiement : 
+2022-04-02  12:13:01   -Suppresion Du paiement : 
+2022-04-02  12:13:03   -Suppresion Du paiement : 
+2022-04-02  12:13:05   -Suppresion Du paiement : 
+2022-04-02  12:13:07   -Suppresion Du paiement : 
+2022-04-02  12:13:08   -Suppresion Du paiement : 
+2022-04-02  12:19:11   -Ajout du paiement Numero : 3069
+2022-04-02  12:21:44   -Ajout du paiement Numero : 1025
+2022-04-02  12:24:52   -Ajout du paiement Numero : 10023
+2022-04-02  12:25:23   -Ajout du paiement Numero : 1008
+2022-04-02  14:01:40   -Ajout du paiement Numero : 1023
+2022-04-02  22:10:11   -User Blocked : 2552
+2022-04-02  22:10:17   -User Blocked : 2552
+2022-04-02  22:10:22   -User Blocked : 2552
+2022-04-02  22:10:32   -User Blocked : 2552
+2022-04-02  22:10:36   -User Blocked : 2552
+2022-04-02  22:11:18   -User Blocked : 25252
+2022-04-02  22:11:22   -User Blocked : 25252
+2022-04-02  22:11:24   -User Blocked : 25252
+2022-04-02  22:11:24   -User Blocked : 25252
+2022-04-02  22:11:24   -User Blocked : 25252
+2022-04-02  22:11:24   -User Blocked : 25252
+2022-04-02  22:11:25   -User Blocked : 25252
+2022-04-02  22:11:25   -User Blocked : 25252
+2022-04-02  22:11:28   -User Blocked : 25252
+2022-04-02  22:11:33   -User Blocked : 25252
+2022-04-02  22:11:37   -User Blocked : 25252
+2022-04-02  22:12:34   -User Blocked : 2662
+2022-04-02  22:12:39   -User Blocked : 2662
+2022-04-02  22:12:43   -User Blocked : 2662
+2022-04-02  22:12:49   -User Blocked : 2662
+2022-04-02  22:12:53   -User Blocked : 2662
+2022-04-02  22:22:23   -User Blocked : 9595
+2022-04-02  22:22:28   -User Blocked : 9595
+2022-04-02  22:22:35   -User Blocked : 9595
+2022-04-02  22:27:15   -User Blocked : 111
+2022-04-02  22:27:20   -User Blocked : 111
+2022-04-02  22:27:24   -User Blocked : 111
+2022-04-02  22:39:59   -User Blocked : 2622
+2022-04-02  22:40:05   -User Blocked : 2622
+2022-04-02  22:41:09   -User Blocked : 252
+2022-04-02  22:41:14   -User Blocked : 252
+2022-04-02  22:43:08   -User Blocked : 22
+2022-04-02  22:43:14   -User Blocked : 22
+2022-04-02  22:43:18   -User Blocked : 22
+2022-04-02  22:46:34   -User Blocked : 254245
+2022-04-02  22:46:38   -User Blocked : 254245
+2022-04-02  22:48:06   -User Blocked : 9669
+2022-04-02  22:48:13   -User Blocked : 9669
+2022-04-02  22:49:56   -User Blocked : 777
+2022-04-02  22:50:01   -User Blocked : 777
+2022-04-02  22:50:05   -User Blocked : 777
+2022-04-02  22:53:27   -User Blocked : 525
+2022-04-02  22:53:37   -User Blocked : 525
+2022-04-02  22:55:14   -User Blocked : 511515
+2022-04-02  22:55:31   -User Blocked : 511515
+2022-04-02  22:55:42   -User Blocked : 511515
+2022-04-02  22:57:12   -User Blocked : 2525
+2022-04-02  22:57:17   -User Blocked : 2525
+2022-04-02  22:57:21   -User Blocked : 2525
+2022-04-02  22:59:32   -User Blocked : 9595
+2022-04-02  22:59:38   -User Blocked : 9595
+2022-04-02  22:59:42   -User Blocked : 9595
+2022-04-02  23:07:35   -User Blocked : 554554
+2022-04-02  23:07:40   -User Blocked : 554554
+2022-04-02  23:10:21   -User Blocked : 62
+2022-04-02  23:10:55   -User Blocked : 62
+2022-04-02  23:11:00   -User Blocked : 62
+2022-04-02  23:13:50   -User Blocked : 515
+2022-04-02  23:13:56   -User Blocked : 515
+2022-04-02  23:14:31   -User Blocked : 515
+2022-04-02  23:15:43   -User Blocked : 2515
+2022-04-02  23:15:48   -User Blocked : 2515
+2022-04-02  23:23:24   -User Blocked : 545
+2022-04-02  23:23:29   -User Blocked : 545
+2022-04-02  23:26:34   -User Blocked : 251
+2022-04-02  23:26:39   -User Blocked : 251
+2022-04-02  23:29:52   -User Blocked : 15151
+2022-04-02  23:29:57   -User Blocked : 15151
+2022-04-02  23:30:01   -User Blocked : 15151
+2022-04-02  23:31:58   -User Blocked : 2515
+2022-04-02  23:32:05   -User Blocked : 2515
+2022-04-02  23:33:07   -User Blocked : 15151
+2022-04-02  23:33:15   -User Blocked : 15151
+2022-04-02  23:34:35   -User Blocked : 151551
+2022-04-02  23:34:40   -User Blocked : 151551
+2022-04-02  23:38:17   -User Blocked : 26666666
+2022-04-02  23:38:23   -User Blocked : 26666666
+2022-04-02  23:39:23   -User Blocked : 84444444
+2022-04-02  23:39:38   -User Blocked : 84444444
+2022-04-02  23:41:03   -User Blocked : 488448
+2022-04-02  23:41:11   -User Blocked : 488448
+2022-04-02  23:42:29   -User Blocked : 59999999
+2022-04-02  23:42:33   -User Blocked : 59999999
+2022-04-02  23:47:54   -User Blocked : 26626262
+2022-04-02  23:47:58   -User Blocked : 26626262
+2022-04-02  23:49:02   -User Blocked : 15515115
+2022-04-02  23:49:08   -User Blocked : 15515115
+2022-04-03  00:00:24   -User Blocked : 26666666
+2022-04-03  00:00:34   -User Blocked : 26666666
+2022-04-03  00:00:44   -User Blocked : 26666666
+2022-04-03  00:00:58   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  00:06:50   -Suppresion Du paiement : 1023
+2022-04-03  00:08:38   -User Blocked : 6222626
+2022-04-03  00:16:33   -Tri  Facture  
+2022-04-03  00:16:33   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:16:35   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:16:37   -Modification De la Langue vers le Francais 
+2022-04-03  00:18:15   -User Blocked : 51
+2022-04-03  00:18:20   -User Blocked : 51
+2022-04-03  00:18:24   -User Blocked : 51
+2022-04-03  00:18:30   -User Blocked : 51
+2022-04-03  00:18:44   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  00:19:22   -User Blocked : 2662626
+2022-04-03  00:19:28   -User Blocked : 2662626
+2022-04-03  00:22:56   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:23:43   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:24:22   -Modification de la langue vers le Francais
+2022-04-03  00:24:50   -Modification de la langue vers l'Anglais
+2022-04-03  00:24:54   -Modification de la langue vers le Russe
+2022-04-03  00:24:58   -Modification de la langue vers le Francais
+2022-04-03  00:26:05   -Modification de la langue vers l'Anglais
+2022-04-03  00:26:09   -Modification de la langue vers le Russe
+2022-04-03  00:26:14   -Modification de la langue vers le Francais
+2022-04-03  00:27:46   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:27:48   -Modification De la Langue vers l'Anglais 
+2022-04-03  00:27:50   -Modification De la Langue vers le Francais 
+2022-04-03  00:27:54   -Tri  Facture  
+2022-04-03  00:29:16   -Tri  Facture  
+2022-04-03  00:30:13   -User Blocked : 15515
+2022-04-03  00:30:21   -User Blocked : 15515
+2022-04-03  00:30:28   -User Blocked : 15515
+2022-04-03  00:30:42   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  00:31:57   -User Blocked : 51551
+2022-04-03  00:32:03   -User Blocked : 51551
+2022-04-03  00:32:08   -User Blocked : 51551
+2022-04-03  00:32:22   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  00:37:45   -User Blocked : 511551
+2022-04-03  00:37:51   -User Blocked : 511551
+2022-04-03  00:38:00   -User Blocked : 511551
+2022-04-03  00:38:15   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  00:54:10   -User Blocked : 
+2022-04-03  00:54:38   -User Blocked : 
+2022-04-03  00:56:06   -User Blocked : 1515
+2022-04-03  00:56:15   -User Blocked : 1515
+2022-04-03  00:57:13   -User Blocked : 
+2022-04-03  01:01:12   -User Blocked : 
+2022-04-03  01:06:11   -User Blocked : 
+2022-04-03  03:53:45   -Ajout du paiement Numero : 203
+2022-04-03  03:55:56   -Ajout du paiement Numero : 1203
+2022-04-03  04:01:04   -Suppresion Du paiement : 1023
+2022-04-03  04:01:09   -Suppresion Du paiement : 1023
+2022-04-03  04:01:47   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:01:47   -Ajout du paiement Numero : 1206
+2022-04-03  04:01:59   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:02:05   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:02:21   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:02:28   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:02:38   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:02:49   -Remise Pour  Le Paiement :  2569
+2022-04-03  04:03:41   -Ajout du paiement Numero : 963
+2022-04-03  04:03:59   -Ajout du paiement Numero : 964
+2022-04-03  04:04:33   -Suppresion Du paiement : 1023
+2022-04-03  04:04:34   -Suppresion Du paiement : 1023
+2022-04-03  04:05:18   -Ajout du paiement Numero : 25
+2022-04-03  04:07:02   -Suppresion Du paiement : 1023
+2022-04-03  04:07:07   -Suppresion Du paiement : 1023
+2022-04-03  04:07:33   -Ajout du paiement Numero : 1236
+2022-04-03  04:09:05   -Ajout du paiement Numero : 169
+2022-04-03  04:11:24   -Ajout du paiement Numero : 236
+2022-04-03  04:11:40   -Ajout du paiement Numero : 239
+2022-04-03  04:12:11   -Ajout du paiement Numero : 237
+2022-04-03  04:12:37   - Valider Paiement de   Numero : 236
+2022-04-03  04:12:48   - Valider Paiement de   Numero : 237
+2022-04-03  04:13:05   - Valider Paiement de   Numero : 239
+2022-04-03  04:13:20   -Ajout du paiement Numero : 238
+2022-04-03  04:18:27   -Ajout du paiement Numero : 1000
+2022-04-03  04:21:29   -Ajout du paiement Numero : 12036
+2022-04-03  04:25:58   -Ajout du paiement Numero : 3688
+2022-04-03  04:26:41   -Suppresion Du paiement : 236
+2022-04-03  04:26:49   -Suppresion Du paiement : 236
+2022-04-03  04:26:57   -Suppresion Du paiement : 236
+2022-04-03  04:26:57   -Suppresion Du paiement : 236
+2022-04-03  04:27:01   -Suppresion Du paiement : 236
+2022-04-03  04:32:37   -Ajout du paiement Numero : 1028
+2022-04-03  04:34:10   -Ajout du paiement Numero : 1236
+2022-04-03  04:35:33   -Ajout du paiement Numero : 10255
+2022-04-03  04:37:45   -Suppresion Du paiement : 1028
+2022-04-03  04:37:48   -Suppresion Du paiement : 236
+2022-04-03  04:38:08   -Ajout du paiement Numero : 2357
+2022-04-03  04:38:35   -Ajout du paiement Numero : 2359
+2022-04-03  04:44:15   -Ajout du paiement Numero : 1699
+2022-04-03  04:44:38   -Tri  Paiement   
+2022-04-03  04:46:54   -Tri  Paiement   
+2022-04-03  04:48:39   -Tri  Paiement   
+2022-04-03  04:49:41   -Tri  Paiement   
+2022-04-03  04:51:52   -Suppresion Du paiement : 
+2022-04-03  04:51:54   -Suppresion Du paiement : 
+2022-04-03  04:51:57   -Suppresion Du paiement : 
+2022-04-03  04:51:59   -Suppresion Du paiement : 
+2022-04-03  04:52:07   -Ajout du paiement Numero : 1005
+2022-04-03  04:52:11   -Suppresion Du paiement : 1005
+2022-04-03  04:52:13   -Suppresion Du paiement : 1005
+2022-04-03  04:52:15   -Suppresion Du paiement : 1005
+2022-04-03  04:52:17   -Suppresion Du paiement : 1005
+2022-04-03  04:52:19   -Suppresion Du paiement : 1005
+2022-04-03  04:52:21   -Suppresion Du paiement : 1005
+2022-04-03  04:52:23   -Suppresion Du paiement : 1005
+2022-04-03  04:52:25   -Suppresion Du paiement : 1005
+2022-04-03  04:52:27   -Suppresion Du paiement : 1005
+2022-04-03  04:52:29   -Suppresion Du paiement : 1005
+2022-04-03  04:52:31   -Suppresion Du paiement : 1005
+2022-04-03  04:52:40   -Ajout du paiement Numero : 106
+2022-04-03  04:52:44   -Suppresion Du paiement : 106
+2022-04-03  04:52:46   -Suppresion Du paiement : 106
+2022-04-03  04:52:48   -Suppresion Du paiement : 106
+2022-04-03  04:55:35   -Ajout du paiement Numero : 2525
+2022-04-03  04:57:27   -Ajout du paiement Numero : 666
+2022-04-03  05:03:00   -Ajout du paiement Numero : 458
+2022-04-03  18:29:37   -Tri   fournisseur   
+2022-04-03  18:29:42   -PDF   Fournisseur   
+2022-04-03  18:29:57   -Modification de la langue vers le Russee
+2022-04-03  18:29:57   -Modification de la langue vers l' Anglais
+2022-04-03  18:30:18   -Modification de la langue vers le Francais
+2022-04-03  18:30:53   -Affichage de statistique 
+2022-04-03  18:31:20   -Modification de la langue vers l'Anglais
+2022-04-03  18:31:26   -Modification de la langue vers le Russe
+2022-04-03  18:32:07   -Modification De la Langue vers l'Anglais 
+2022-04-03  18:32:52   -User Blocked : 125699
+2022-04-03  18:33:05   -User Blocked : 125699
+2022-04-03  18:33:15   -User Blocked : 125699
+2022-04-03  18:33:38   -Modification De la Langue vers le Francais 
+2022-04-03  18:33:39   -User Blocked : 125699
+2022-04-03  18:34:01   -Modification De la Langue vers le Russe 
+2022-04-03  18:34:03   -User Blocked : 125699
+2022-04-03  18:34:32   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  18:34:48   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-03  23:19:35   -Tri  Facture  
+2022-04-03  23:19:38   -Tri  Facture  
+2022-04-03  23:19:42   -Tri  Facture  
+2022-04-03  23:19:42   -Modification De la Langue vers l'Anglais 
+2022-04-03  23:19:44   -Modification De la Langue vers l'Anglais 
+2022-04-03  23:19:47   -Modification De la Langue vers le Francais 
+2022-04-03  23:19:49   -Modification De la Langue vers le Russe 
+2022-04-04  15:47:48   -User Blocked : 
+2022-04-04  15:48:29   -User Blocked : 662626
+2022-04-04  15:48:38   -User Blocked : 662626
+2022-04-04  15:49:19   -User Blocked : 662626
+2022-04-04  15:49:43   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-04  15:50:48   -Ajout du paiement Numero : 1206
+2022-04-04  15:51:00   -Suppresion Du paiement : 458
+2022-04-04  15:51:02   -Recherche du  Paiement Numero :458
+2022-04-04  15:51:05   -Recherche du  Paiement Numero :2525
+2022-04-04  15:51:13   -Tri  Paiement   
+2022-04-04  15:51:18   -Affichage de statistique 
+2022-04-04  15:51:25   -Tri  Paiement   
+2022-04-04  15:55:27   -User Blocked : 12369
+2022-04-04  15:59:16   -User Blocked : 4555
+2022-04-04  15:59:33   -User Blocked : 4555
+2022-04-04  16:07:45   -User Blocked : 4555
+2022-04-04  16:08:00   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-04  16:08:35   -User Blocked : 
+2022-04-04  16:09:27   -User Blocked : 
+2022-04-04  16:10:44   -User Blocked : 
+2022-04-04  16:12:11   -User Blocked : 
+2022-04-04  16:12:34   -Suppresion Du paiement : 1005
+2022-04-04  16:12:34   -Suppresion Du paiement : 1005
+2022-04-04  16:12:38   -Suppresion Du paiement : 1005
+2022-04-04  16:12:46   -Suppresion Du paiement : 1005
+2022-04-04  16:16:21   -Suppresion De La Facture de Numero :  1232
+2022-04-04  16:16:23   -Suppresion De La Facture de Numero :  1232
+2022-04-04  16:30:25   -Ajout De La Facture Numero : 236666
+2022-04-04  16:37:47   -Ajout De La Facture Numero : 85555555
+2022-04-04  16:38:00   -Suppresion De La Facture de Numero :  1232
+2022-04-04  16:38:13   -Tri  Facture  
+2022-04-04  16:38:15   -Tri  Facture  
+2022-04-04  16:38:17   -Tri  Facture  
+2022-04-04  16:38:20   -Tri  Facture  
+2022-04-04  16:38:22   -Tri  Facture  
+2022-04-04  16:38:24   -Tri  Facture  
+2022-04-04  16:38:24   -Tri  Facture  
+2022-04-04  16:40:38   -Ajout De La Facture Numero : 85
+2022-04-04  16:40:46   -Suppresion De La Facture de Numero :  123666
+2022-04-04  16:40:48   -Suppresion De La Facture de Numero :  123666
+2022-04-04  16:40:50   -Suppresion De La Facture de Numero :  123666
+2022-04-04  16:52:38   -Ajout De La Facture Numero : 665
+2022-04-04  16:53:43   -Ajout De La Facture Numero : 6652
+2022-04-04  16:57:49   -Ajout De La Facture Numero : 1515
+2022-04-04  17:26:52   -Ajout du paiement Numero : 266
+2022-04-04  17:30:17   -Ajout du paiement Numero : 1441
+2022-04-04  17:30:34   - Valider Paiement de   Numero : 1005
+2022-04-04  17:30:54   -Ajout du paiement Numero : 142
+2022-04-04  17:48:58   -Ajout du paiement Numero : 1208
+2022-04-04  17:50:22   - Valider Paiement de   Numero : 1208
+2022-04-04  17:50:38   -Ajout du paiement Numero : 1207
+2022-04-04  17:54:23   -Ajout du paiement Numero : 1058
+2022-04-04  17:54:47   -Ajout du paiement Numero : 1057
+2022-04-04  17:56:17   -Suppresion Du paiement : 1005
+2022-04-04  17:56:19   -Suppresion Du paiement : 1005
+2022-04-04  17:56:39   -Ajout du paiement Numero : 1047
+2022-04-04  17:56:53   -Suppresion Du paiement : 1005
+2022-04-04  17:57:59   -Ajout du paiement Numero : 5151
+2022-04-04  17:58:10   -Suppresion Du paiement : 1005
+2022-04-04  17:59:17   -Ajout du paiement Numero : 456
+2022-04-04  18:00:11   -Ajout du paiement Numero : 1569
+2022-04-04  18:01:37   -Ajout du paiement Numero : 5151
+2022-04-04  18:11:54   -Ajout du paiement Numero : 1515
+2022-04-04  18:13:46   -Ajout du paiement Numero : 151
+2022-04-04  18:15:29   -Ajout du paiement Numero : 1009
+2022-04-04  18:18:57   -Ajout du paiement Numero : 1169
+2022-04-04  18:20:40   -Suppresion Du paiement : 1005
+2022-04-04  18:20:44   -Suppresion Du paiement : 1005
+2022-04-04  18:20:45   -Suppresion Du paiement : 1569
+2022-04-04  18:20:53   -Suppresion Du paiement : 1515
+2022-04-04  18:20:53   -Suppresion Du paiement : 1515
+2022-04-04  18:20:54   -Suppresion Du paiement : 1515
+2022-04-04  18:20:57   -Suppresion Du paiement : 1005
+2022-04-04  18:21:07   -Ajout du paiement Numero : 1236
+2022-04-04  18:21:18   -Suppresion Du paiement : 1005
+2022-04-04  18:22:50   -Ajout du paiement Numero : 1258
+2022-04-04  18:25:40   -Ajout du paiement Numero : 1789
+2022-04-04  18:30:12   -Ajout du paiement Numero : 3699
+2022-04-04  18:37:08   -Suppresion Du paiement : 1005
+2022-04-04  18:37:18   -Suppresion Du paiement : 1236
+2022-04-04  18:37:20   -Suppresion Du paiement : 1236
+2022-04-04  18:37:22   -Suppresion Du paiement : 1236
+2022-04-04  18:37:24   -Suppresion Du paiement : 1236
+2022-04-04  18:39:38   - Valider Paiement de   Numero : 3699
+2022-04-04  18:39:55   -Suppresion Du paiement : 1258
+2022-04-04  18:40:04   -Ajout du paiement Numero : 1009
+2022-04-04  18:40:36   - Valider Paiement de   Numero : 1789
+2022-04-04  18:40:48   - Valider Paiement de   Numero : 1009
+2022-04-04  18:41:03   -Ajout du paiement Numero : 1087
+2022-04-04  18:41:51   -Affichage de statistique 
+2022-04-04  18:42:42   -Ajout fournisseur de Numero : 7777
+2022-04-04  18:43:23   -Ajout du paiement Numero : 1081
+2022-04-04  18:46:55   -Ajout du paiement Numero : 1169
+2022-04-04  19:24:19   -Suppresion Du paiement : 1009
+2022-04-04  19:24:37   -Ajout du paiement Numero : 1169
+2022-04-04  19:25:14   - Valider Paiement de   Numero : 1081
+2022-04-04  19:25:41   - Valider Paiement de   Numero : 1169
+2022-04-04  19:26:21   -Ajout du paiement Numero : 1168
+2022-04-04  19:28:45   -Ajout du paiement Numero : 1164
+2022-04-04  19:29:22   -Suppresion Du paiement : 1009
+2022-04-04  19:29:46   -Ajout du paiement Numero : 6921
+2022-04-04  19:35:31   -Ajout du paiement Numero : 1569
+2022-04-04  19:37:57   -Ajout du paiement Numero : 1698
+2022-04-04  19:38:21   -Suppresion Du paiement : 1009
+2022-04-04  19:41:16   -Suppresion Du paiement : 1009
+2022-04-04  19:41:23   -Suppresion Du paiement : 1009
+2022-04-04  19:41:33   -Suppresion Du paiement : 1009
+2022-04-04  19:41:53   -Ajout du paiement Numero : 1088
+2022-04-04  19:44:03   -Ajout du paiement Numero : 1369
+2022-04-04  19:45:16   -Ajout du paiement Numero : 5153
+2022-04-04  19:47:05   -Ajout du paiement Numero : 1458
+2022-04-04  19:48:10   -Ajout du paiement Numero : 5155
+2022-04-04  19:49:44   -Ajout du paiement Numero : 1469
+2022-04-04  19:51:11   -Ajout du paiement Numero : 14599
+2022-04-04  19:51:25   -Suppresion Du paiement : 
+2022-04-04  19:51:27   -Suppresion Du paiement : 
+2022-04-04  19:51:29   -Suppresion Du paiement : 
+2022-04-04  19:51:31   -Suppresion Du paiement : 
+2022-04-04  19:51:33   -Suppresion Du paiement : 
+2022-04-04  19:51:35   -Suppresion Du paiement : 
+2022-04-04  19:51:44   -Ajout du paiement Numero : 14599
+2022-04-04  19:51:47   -Suppresion Du paiement : 14599
+2022-04-04  19:51:49   -Suppresion Du paiement : 14599
+2022-04-04  19:51:51   -Suppresion Du paiement : 14599
+2022-04-04  19:51:53   -Suppresion Du paiement : 14599
+2022-04-04  19:51:55   -Suppresion Du paiement : 14599
+2022-04-04  19:51:57   -Suppresion Du paiement : 14599
+2022-04-04  19:52:00   -Suppresion Du paiement : 14599
+2022-04-04  19:52:02   -Suppresion Du paiement : 14599
+2022-04-04  19:52:16   -Ajout du paiement Numero : 1459
+2022-04-04  19:52:59   -Ajout du paiement Numero : 777
+2022-04-04  19:53:07   - Valider Paiement de   Numero : 777
+2022-04-04  19:53:27   -Ajout du paiement Numero : 771
+2022-04-04  19:53:48   - Valider Paiement de   Numero : 1459
+2022-04-04  19:54:02   -Tri  Paiement   
+2022-04-04  19:54:10   -Affichage de statistique 
+2022-04-04  19:54:11   -Tri  Paiement   
+2022-04-04  19:54:47   -Affichage de statistique 
+2022-04-05  02:28:08   -Affichage de statistique 
+2022-04-05  12:29:14   -Generation de la Facture : 665
+2022-04-05  13:25:12   -User Blocked : 45343
+2022-04-05  13:25:36   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-05  13:26:25   -User Blocked : 444
+2022-04-05  13:27:11   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-05  13:27:50   -Affichage de statistique 
+2022-04-05  13:39:00   -Modification de la langue vers l' Anglais
+2022-04-05  13:39:04   -Modification de la langue vers le Russee
+2022-04-05  13:39:08   -Tri   fournisseur   
+2022-04-05  14:10:06   -User Blocked : 8557
+2022-04-05  14:10:32   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-05  14:54:09   -Modification de la langue vers l' Anglais
+2022-04-05  14:54:13   -Modification de la langue vers le Russee
+2022-04-05  14:54:17   -Modification de la langue vers le Francais
+2022-04-05  17:01:57   -Modification de la langue vers l' Anglais
+2022-04-05  17:01:59   -Modification de la langue vers le Francais
+2022-04-05  17:02:01   -Modification de la langue vers le Russee
+2022-04-05  17:02:03   -Modification de la langue vers l' Anglais
+2022-04-05  17:02:05   -Modification de la langue vers le Francais
+2022-04-05  17:02:07   -Modification de la langue vers le Russee
+2022-04-05  17:02:09   -Modification de la langue vers l' Anglais
+2022-04-05  17:02:11   -Modification de la langue vers le Francais
+2022-04-05  17:02:13   -Modification de la langue vers le Russee
+2022-04-05  17:02:15   -Modification de la langue vers l' Anglais
+2022-04-05  17:02:17   -Modification de la langue vers le Francais
+2022-04-05  17:02:19   -Modification de la langue vers le Russee
+2022-04-05  17:02:21   -Modification de la langue vers l' Anglais
+2022-04-05  17:02:22   -Tri   fournisseur   
+2022-04-07  00:04:53   -Modification de la langue vers l' Anglais
+2022-04-07  00:05:09   -Modification de la langue vers le Russee
+2022-04-07  00:05:18   -Modification de la langue vers le Francais
+2022-04-07  00:06:13   -Affichage de statistique 
+2022-04-07  00:06:35   -Tri  Paiement   
+2022-04-07  00:10:51   -User Blocked : 9958484
+2022-04-07  00:11:22   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-07  00:13:52   -User Blocked : 543453
+2022-04-07  00:14:14   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-07  00:18:12   -User Blocked : 5354
+2022-04-07  00:18:40   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-07  00:20:06   -User Blocked : 543554
+2022-04-07  00:20:35   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-07  00:48:19   -Affichage de statistique 
+2022-04-07  00:48:59   -Modification De La Facture Numero : 1515
+2022-04-07  00:49:10   -Affichage de statistique 
+2022-04-07  00:49:35   -Affichage de statistique 
+2022-04-07  00:49:35   -Modification De La Facture Numero : 1515
+2022-04-07  00:49:48   -Modification De la Langue vers l'Anglais 
+2022-04-07  00:49:52   -Modification De la Langue vers le Russe 
+2022-04-07  00:49:56   -Modification De la Langue vers le Francais 
+2022-04-07  00:50:17   -Affichage de statistique 
+2022-04-07  00:50:30   -Affichage de statistique 
+2022-04-07  00:50:41   -Affichage de statistique 
+2022-04-07  00:51:17   -Ajout du paiement Numero : 1478
+2022-04-07  00:51:28   -Affichage de statistique 
+2022-04-07  03:05:48   -Set Theme1
+2022-04-07  03:05:49   -Set Theme2
+2022-04-07  03:05:50   -Set Theme3
+2022-04-07  03:05:50   -Set Theme4
+2022-04-07  03:05:51   -Set Theme5
+2022-04-07  03:05:51   -Set Theme6
+2022-04-07  03:05:52   -Set Theme7
+2022-04-07  03:05:52   -Set Theme1
+2022-04-07  03:17:00   -Modification de la langue vers le Russe
+2022-04-07  03:17:01   -Modification de la langue vers l'Anglais
+2022-04-07  03:17:19   -Modification de la langue vers le Francais
+2022-04-07  03:17:21   -Modification De la Langue vers l'Anglais 
+2022-04-07  03:17:21   -Modification de la langue vers le Russee
+2022-04-07  03:17:25   -Modification De la Langue vers le Francais 
+2022-04-07  03:17:27   -Modification De la Langue vers le Russe 
+2022-04-07  03:17:27   -Modification de la langue vers l' Anglais
+2022-04-07  03:17:28   -Modification de la langue vers le Francais
+2022-04-07  03:17:30   -Modification de la langue vers le Russee
+2022-04-07  03:17:32   -Modification de la langue vers l' Anglais
+2022-04-07  03:17:34   -Modification de la langue vers le Francais
+2022-04-07  03:17:36   -Modification de la langue vers le Russee
+2022-04-07  03:17:38   -Modification de la langue vers l' Anglais
+2022-04-07  03:19:50   -Modification de la langue vers le Russe
+2022-04-07  03:19:52   -Modification de la langue vers l'Anglais
+2022-04-07  03:19:55   -Modification de la langue vers le Francais
+2022-04-07  03:20:09   -Modification de la langue vers le Francais
+2022-04-07  03:20:10   -Modification de la langue vers le Russe
+2022-04-07  03:20:10   -Modification de la langue vers l'Anglais
+2022-04-07  03:25:44   -Ouverture Du Calculatrice
+2022-04-07  03:25:44   -Modification de la langue vers l'Anglais
+2022-04-07  03:25:44   -Affichage de statistique 
+2022-04-07  03:25:46   -Tri  Paiement   
+2022-04-07  03:25:56   - Valider Paiement de   Numero : 771
+2022-04-07  03:27:25   - Valider Paiement de   Numero : 1478
+2022-04-07  03:28:07   -Ajout du paiement Numero : 1470
+2022-04-07  03:29:29   -PDF   Fournisseur   
+2022-04-07  03:32:25   -Ajout fournisseur de Numero : 1478
+2022-04-07  03:32:33   -Tri   fournisseur   
+2022-04-07  03:32:50   -Tri   fournisseur   
+2022-04-07  03:32:52   -Tri   fournisseur   
+2022-04-07  12:05:42   -Tri   fournisseur   
+2022-04-07  12:05:48   -Tri  Paiement   
+2022-04-07  12:05:54   -Tri  Facture  
+2022-04-07  12:06:00   -Recherche du  Paiement Numero :1478
+2022-04-07  12:06:11   -Recherche  du  fournisseur par Nom  
+2022-04-07  12:07:22   -Tri  Paiement   
+2022-04-07  12:08:16   -User Blocked : 54564
+2022-04-07  12:09:12   -Vioalation system leading to an emergency Shut Down  !!! 
+2022-04-07  12:10:20   -PDF   Fournisseur   
+2022-04-07  12:10:48   -Generation de la Facture : 1515
+2022-04-07  12:11:26   -Affichage de statistique 
+2022-04-07  12:11:50   -Affichage de statistique 
+2022-04-07  12:11:56   -Tri  Facture  
+2022-04-07  12:11:58   -Tri  Facture  
+2022-04-07  12:12:32   -Tri  Paiement   
+2022-04-07  12:12:36   -Modification de la langue vers l'Anglais
+2022-04-07  12:12:44   -Modification de la langue vers l'Anglais
+2022-04-07  12:12:45   -Modification de la langue vers le Francais
+2022-04-07  12:12:46   -Modification de la langue vers le Russe
+2022-04-07  12:12:52   -Modification de la langue vers le Francais
+2022-04-07  12:12:52   -Modification de la langue vers le Russe
+2022-04-07  12:13:16   -Modification de la langue vers l'Anglais
+2022-04-07  12:13:22   -Modification de la langue vers le Russe
+2022-04-07  12:14:02   -Modification de la langue vers le Francais
+2022-04-07  12:14:32   -nouveau fichier 
+2022-04-07  12:14:36   -nouveau fichier 
+2022-04-07  12:14:38   -nouveau fichier 
+2022-04-07  12:14:40   -nouveau fichier 
+2022-04-07  12:15:21   -Notepad en Anglais
+2022-04-07  12:15:22   -Notepad en Francais
+2022-04-07  12:15:24   -Notepad en Russe
+2022-04-07  12:15:25   -Notepad en Anglais
+2022-04-07  12:15:38   -Affichage de statistique 
+2022-04-07  12:15:43   -Modification de la langue vers l'Anglais
+2022-04-07  12:15:52   -PDF   Fournisseur   
+2022-04-07  12:18:42   -Ajout du paiement Numero : 8979
+2022-04-07  12:19:24   -Ajout du paiement Numero : 8978
+2022-04-07  12:19:47   -Ajout du paiement Numero : 8975
+2022-04-07  12:22:06   -Set Theme1
+2022-04-07  12:22:08   -Set Theme2
+2022-04-07  12:22:10   -Set Theme3
+2022-04-07  12:22:12   -Set Theme4
+2022-04-07  12:22:14   -Set Theme5
+2022-04-07  12:22:15   -Set Theme6
+2022-04-07  12:22:17   -Set Theme7
+2022-04-07  12:23:28   -Ouverture Du Calculatrice
+2022-04-07  12:23:42   -Ouverture Du Calculatrice
