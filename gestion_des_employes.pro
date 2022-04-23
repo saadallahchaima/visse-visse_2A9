@@ -1,4 +1,4 @@
-QT       += core gui sql charts
+QT       += core gui sql charts serialport
 QT       += widgets multimedia
 QT       +=printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
@@ -24,6 +24,7 @@ SOURCES += \
     congee.cpp \
     connection.cpp \
     demande_congee.cpp \
+    dialog.cpp \
     employes.cpp \
     login.cpp \
     main.cpp \
@@ -34,12 +35,14 @@ HEADERS += \
     congee.h \
     connection.h \
     demande_congee.h \
+    dialog.h \
     employes.h \
     login.h \
     mainwindow.h \
     qcustomplot.h
 
 FORMS += \
+    dialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

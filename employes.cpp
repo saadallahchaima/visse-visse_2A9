@@ -189,8 +189,8 @@ QSqlQueryModel * employes::trier_employes()
 }
 void employes::printPDF_employe()
 {QPdfWriter pdf("C:/Users/saada/OneDrive/Bureau/gestion_des_employes/print_employe.pdf");
-    QPainter painter(&pdf);
-    QFont font=painter.font();
+    QPainter painter(&pdf);//fournit des fonctions hautement optimisées pour faire dessiner
+    QFont font=painter.font();//la police utilisée pour dessiner le texte
     QMessageBox msgBox;
     QString res1=QString::number(nombre_enfants);
     QString res2=QString::number(cnss);
@@ -201,7 +201,7 @@ void employes::printPDF_employe()
      QDate date_entree =date_entree.currentDate() ;
       QString Dateee = date_entree.toString() ;
 
-       font.setPointSize(font.pointSize() * 2);
+       font.setPointSize(font.pointSize() * 2);//taille en point de police
               painter.setFont(font);
               painter.setPen(Qt::red);
               painter.drawText(3000,800 , "Fiche d'employe ");

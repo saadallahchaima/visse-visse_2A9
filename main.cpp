@@ -7,6 +7,8 @@
 #include<QFile>
 #include<QTranslator>
 #include<QInputDialog>
+#include"dialog.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -30,16 +32,18 @@ int main(int argc, char *argv[])
         }
 
     //*************
+Dialog d;
  MainWindow w;
 
-
+//d.show();
     if(test)
-    {
+    {//d.show();
         w.show();
 
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
+
 
 }
     else

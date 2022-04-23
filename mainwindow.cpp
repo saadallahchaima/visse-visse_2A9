@@ -33,6 +33,9 @@
 #include<QSoundEffect>
 #include<QMediaPlayer>
 #include<QMediaPlaylist>
+#include<QMovie>
+#include<QMoveEvent>
+#include"dialog.h"
 
 #define CARACTERES_ETRANGERS "~{}[]()|-`'^ç@_]\"°01234567890+=£$*µ/§!?,.&#;><"
 
@@ -49,12 +52,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->lineEdit_supp->setValidator(new QIntValidator(0,99999999,this));
     ui->lineEdit_cnss->setValidator(new QIntValidator(0,9999,this));
     ui->lineEdit_2_nom_et_prenom->setValidator(new QRegExpValidator( QRegExp("[A-Z..a-z]*") ));
+
     son=new QSound(":/img/click2.wav");
     setWindowTitle("Ma super app!");
      QPixmap Pix;
-     QPixmap pic_employe(":/img/hello.jpg");
+     //QPixmap pic_employe(":/img/hello.jpg");
 
-         QPropertyAnimation *animation2;
+        /* QPropertyAnimation *animation2;//anime les proprieté QT
          int w2=ui->animation->width();
          int h2=ui->animation->height();
 
@@ -63,10 +67,7 @@ MainWindow::MainWindow(QWidget *parent)
                      animation2->setDuration(3000);
                      animation2->setStartValue(ui->animation->geometry());
                      animation2->setEndValue(QRect(1,350,579,80 ));
-                     animation2->start();
-
-
-
+                     animation2->start();*/
 }
 
 MainWindow::~MainWindow()
@@ -98,7 +99,6 @@ QString num_tele=ui->lineEdit_num_tele->text();
 
 employes E(cin,nomprenom,email,adresse,profession,assurance,date_entree,naissance,nombre_enfants,cnss,nationnalite,salaire,num_tele);
 bool controle=E.controle_saisi_emp(E);
-
   if(controle)
   {
       QMessageBox::critical(nullptr,QObject::tr("attention"),
@@ -114,28 +114,30 @@ bool controle=E.controle_saisi_emp(E);
 
   else
   {
+
 bool test=E.ajouter_employe();
 if(test)
-{
+{on_lab_anim_emp_linkActivated(2);
     QMessageBox::information(nullptr,QObject::tr("ok"),
                             QObject::tr("Ajout effectué \n"
                                          "click cancel to exit."), QMessageBox::Cancel);
     ui->tableView_Affichage_Emp->setModel(Etmp.afficher_Listeemploye());
 
+
 }
 else
+    on_lab_anim_emp_linkActivated(3);
     QMessageBox::critical(nullptr,QObject::tr("Not OK" ),
                  QObject::tr("Ajout non effectué. \n"
                              "click cancel to exit."), QMessageBox::Cancel);
+
 }
 
 }
 
 void MainWindow::on_pushButton_supp_emp_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
+   son->play();
     QString cin=ui->lineEdit_supp->text();
     QMessageBox::StandardButton reply;
          reply = QMessageBox::question(this, "Supprimer", "Etes vous sur de supprimer ce employé ?",
@@ -161,11 +163,9 @@ void MainWindow::on_pushButton_supp_emp_clicked()
 }
 
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_emp_clicked()
 
-{   QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/img/click.mp3"));
-    player->play();
+{ son->play();
     employes aux;
   aux.setcin(ui->lineEdit_cin->text());
       aux.setnomprenom(ui->lineEdit_2_nom_et_prenom->text());
@@ -204,11 +204,9 @@ void MainWindow::on_pushButton_quitter_clicked()
 {
    close();
    }
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_recherche_emp_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
+   son->play();
     QString rech=ui->lineEdit_recherche->text();
 
         if(rech=="")
@@ -228,21 +226,19 @@ void MainWindow::on_pushButton_sort_clicked()
 
 void MainWindow::on_pushButton_valider_Demande_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
+   son->play();
     //recuperation des informations saisies dans les champs
  QString nature_conges=ui->comboBox_type_c->currentText();
 
    aux.setnomprenom(ui->Le_nom_emp->text());
 
-    QString num_tele_employes=ui->Le_tele->text();
+ QString num_tele_employes=ui->Le_tele->text();
 
     QDate date_depart_conge=ui->dateTimeEdit_C->date();
     QDate date_retour_conge=ui->dateTimeEdit_D_C->date();
     aux.setcin(ui->le_cin_emp->text());
 
-    QString fonction_employe=ui->le_fonction->text();
+QString fonction_employe=ui->le_fonction->text();
 QDate date_demande=ui->dateTimeEdit_date_demande->date();
 QString reponse=ui->le_reponse->text();
 QString cause=ui->lineEdit_cause->text();
@@ -263,6 +259,7 @@ QString cause=ui->lineEdit_cause->text();
         QMessageBox::critical(nullptr,QObject::tr("Not OK" ),
                      QObject::tr("Ajout non effectué. \n"
                                  "click cancel to exit."), QMessageBox::Cancel);
+
     }
 
 void MainWindow::on_pushButton_supp_emp_supp_demande_clicked()
@@ -500,13 +497,13 @@ void MainWindow::on_pushButton_printPDF_demande_clicked()
 
    aux.setnomprenom(ui->Le_nom_emp->text());
 
-   QString num_tele_employes=ui->Le_tele->text();
+QString num_tele_employes=ui->Le_tele->text();
 
-    QDate date_depart_conge=ui->dateTimeEdit_C->date();
-    QDate date_retour_conge=ui->dateTimeEdit_D_C->date();
-    aux.setcin(ui->le_cin_emp->text());
+QDate date_depart_conge=ui->dateTimeEdit_C->date();
+QDate date_retour_conge=ui->dateTimeEdit_D_C->date();
+aux.setcin(ui->le_cin_emp->text());
 
-    QString fonction_employe=ui->le_fonction->text();
+QString fonction_employe=ui->le_fonction->text();
 QDate date_demande=ui->dateTimeEdit_date_demande->date();
 QString reponse=ui->le_reponse->text();
 QString cause=ui->lineEdit_cause->text();
@@ -517,25 +514,22 @@ QString cause=ui->lineEdit_cause->text();
 
 void MainWindow::on_pushButton_sort_demande_acceptes_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
+
+  son->play();
       ui->tableView_2_C_3->setModel(tamp.trier_demande_acceptes_par_date());
 }
 
 void MainWindow::on_pushButton_sort_demande_refusees_clicked()
 {
-    QMediaPlayer *player = new QMediaPlayer;
-    player->setMedia(QUrl("qrc:/son/click.mp3"));
-    player->play();
+   son->play();
       ui->tableView_2_C_2->setModel(tamp.trier_date_demande());
 }
 void MainWindow::statistiques()
 {
-    QPieSeries *series = new QPieSeries();
+    QPieSeries *series = new QPieSeries();//calcule le pourcentage d'une tranche par apport à la somme de toutes les tranches de la serie
        QSqlQuery qry("SELECT * FROM employes where profession=:profession");
-           QMap<QString,int >qq;
-           QVector <QString> names;
+           QMap<QString,int >qq;//l'une des classe de conteneurs graphique de QT
+           QVector <QString> names;//tableau dynamique
            while(qry.next())
 
                {
@@ -547,18 +541,18 @@ void MainWindow::statistiques()
                for(int i=0;i< names.size();i++)
                    series->append(names[i],qq[names[i]]);
 
-           QChart *chart = new QChart();
-           chart->addSeries(series);
+QChart *chart = new QChart();
+chart->addSeries(series);
 chart->setTitle("statistiques des professions dans l'entreprise");
-series->append("ingenieurs", 80);
+series->append("ingenieurs", 80);//ajout dans le tableau de slice specifié par slices à la serie
 series->append("Ouvriers", 70);
 series->append("Personnels", 50);
-QPieSlice *slice = series->slices().at(2);
-slice->setExploded(true);
-slice->setLabelVisible(true);
+QPieSlice *slice = series->slices().at(2);//tranche
+slice->setExploded(true);//si la tranche est séparée du secteur
+slice->setLabelVisible(true);//contient la visibilité de l'etiquette de la tranche
 slice->setPen(QPen(Qt::darkGreen, 2));
-slice->setBrush(Qt::green);
- QChartView *chartview = new QChartView(chart);
+slice->setBrush(Qt::green);//le pinceau utilisée pour remplir la tranche
+ QChartView *chartview = new QChartView(chart);//afficher le graphique des series
   chartview->setParent(ui->horizontalFrame);
 
 
@@ -635,26 +629,34 @@ QString login_p=ui->le_cin_log->text();
 
  if((nom_et_prenom==("Admin")||("Employes"))&&(login_p==("Admin")||("Employes")))
         {if(((nom_et_prenom=="Admin")&&(login_p=="Admin"))||((nom_et_prenom=="Employe")&&(login_p=="Employe")))
-     {
+     {on_lab_anim_emp_linkActivated(4);
      QMessageBox::information(nullptr,QObject::tr("ok"),
                              QObject::tr("vous etes trouvé \n"
                                           "click cancel to exit."), QMessageBox::Cancel);
      if(login_p=="Admin")
-            ui->tabWidget->setCurrentIndex(1);
+         ui->tabWidget->removeTab(0);
+         ui->tabWidget->setVisible(true);
+
+
+
     if(login_p=="Employe")
-    {
+    {on_lab_anim_emp_linkActivated(4);
         QMessageBox::information(nullptr,QObject::tr("ok"),
                                 QObject::tr("BienVenue! \n"
-                                             "click cancel to exit."), QMessageBox::Cancel);ui->tabWidget->setCurrentIndex(3);
-ui->tabWidget->removeTab(4);
-          ui->tabWidget->setCurrentIndex(3);
+                                         "click cancel to exit."), QMessageBox::Cancel);ui->tabWidget->setCurrentIndex(3);
+         ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(0);
+
+
     }
          }else
- {
+ { on_lab_anim_emp_linkActivated(7);
      QMessageBox::critical(nullptr,QObject::tr("not"),
                                   QObject::tr("vous netes trouvé \n"
                                                "click cancel to exit."), QMessageBox::Cancel);
+
                  ui->tabWidget->setCurrentIndex(0);
+
  }
  }
  son->play();
@@ -664,48 +666,6 @@ void MainWindow::on_pushButton_7_clicked()
 {
     close();
      son->play();
-}
-
-void MainWindow::on_pushButton_11_clicked()
-{     //set the app style sheet
-        QFile styleSheetFile(":/img/Adaptic.qss");
-        styleSheetFile.open(QFile::ReadOnly);
-        QString styleSheet = QLatin1String(styleSheetFile.readAll());
-        MainWindow::setStyleSheet(styleSheet);
-         son->play();
-}
-void MainWindow::on_pushButton_12_clicked()
-{
-    //set the app style sheet
-           QFile styleSheetFile(":/img/normal.qss");
-           styleSheetFile.open(QFile::ReadOnly);
-           QString styleSheet = QLatin1String(styleSheetFile.readAll());
-           MainWindow::setStyleSheet(styleSheet);
-            son->play();
-}
-
-
-
-void MainWindow::on_pushButton_13_clicked()
-{
-
-        //set the app style sheet
-               QFile styleSheetFile(":/img/Obit.qss");
-               styleSheetFile.open(QFile::ReadOnly);
-               QString styleSheet = QLatin1String(styleSheetFile.readAll());
-               MainWindow::setStyleSheet(styleSheet);
- son->play();
-
-
-}
-
-void MainWindow::on_pushButton_14_clicked()
-{
-                   QFile styleSheetFile(":/img/Diplaytap.qss");
-                   styleSheetFile.open(QFile::ReadOnly);
-                   QString styleSheet = QLatin1String(styleSheetFile.readAll());
-                   MainWindow::setStyleSheet(styleSheet);
-                   son->play();
 }
 
 void MainWindow::on_pushButton_15_clicked()
@@ -791,7 +751,7 @@ void MainWindow::on_pushButton_16_clicked()
 
 
 void MainWindow::on_commandLinkButton_theme_clicked()
-{
+{ son->play();
     QString T=ui->commandLinkButton_theme->text() ;
 
 
@@ -827,3 +787,60 @@ if(T=="Theme3")
        }
 
 }
+
+
+
+
+void MainWindow::on_lab_anim_emp_linkActivated(int choice)
+{
+if(choice==1)
+{
+    Sleep(5);
+ui->lab_anim_emp->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+QMovie *movie = new QMovie(":/img/No Emoji GIF - No Emoji - Discover & Share GIFs.gif");
+ui->lab_anim_emp->setMovie (movie);
+movie->start ();
+
+}
+
+
+
+   if (choice ==2 )
+    {
+        Sleep(5);
+    ui->lab_anim_emp->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    QMovie *movie = new QMovie(":/img/CLIPLY_372103860_CHECK_MARK_400px.gif");
+    ui->lab_anim_emp->setMovie (movie);
+    movie->start ();
+
+}
+     if (choice ==3 )
+      {
+          Sleep(5);
+      ui->lab_anim_emp->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+      QMovie *movie = new QMovie(":/img/Awth.gif");
+      ui->lab_anim_emp->setMovie (movie);
+      movie->start ();
+
+
+      }
+if(choice==4)
+{  Sleep(5);
+    ui->label_anim_logon_emp->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+    QMovie *movie = new QMovie(":/img/Vava Wright (@vavawrite3).gif");
+    ui->label_anim_logon_emp->setMovie (movie);
+    movie->start ();
+
+}
+if (choice ==7 )
+ {
+     Sleep(5);
+ ui->label_anim_logon_emp->setFrameStyle(QFrame::Panel | QFrame::Sunken);
+ QMovie *movie = new QMovie(":/img/Awth.gif");
+ ui->label_anim_logon_emp->setMovie (movie);
+ movie->start ();
+
+
+ }
+
+    }

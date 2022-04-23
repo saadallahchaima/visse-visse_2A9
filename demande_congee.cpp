@@ -200,10 +200,10 @@ void demande_congee::printPDF_demande()
        QString Dateeee = date_retour_conge.toString() ;
 
     QPdfWriter pdf("C:/Users/saada/OneDrive/Bureau/gestion_des_employes/print_demande.pdf");
-    QPainter painter(&pdf);
-    QFont font=painter.font();
+    QPainter painter(&pdf);//fournit des fonctions hautement optimisées pour faire dessiner
+    QFont font=painter.font();//la police utilisée pour dessiner le texte
     QMessageBox msgBox;
-       font.setPointSize(font.pointSize() * 2);
+       font.setPointSize(font.pointSize() * 2);//taille en point de police
               painter.setFont(font);
               painter.setPen(Qt::red);
               painter.drawText(3000,800 , "Demande Conge ");

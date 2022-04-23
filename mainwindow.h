@@ -14,6 +14,7 @@
 #include <QSound>
 #include <QMediaPlayer>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -29,9 +30,9 @@ public:
 private slots:
     void on_pushButton_valider_clicked();
     void on_pushButton_supp_emp_clicked();
-   void on_pushButton_2_clicked();
+   void on_pushButton_2_emp_clicked();
    void on_pushButton_quitter_clicked();
-   void on_pushButton_clicked();
+   void on_pushButton_recherche_emp_clicked();
    void on_pushButton_sort_clicked();
 
    void on_pushButton_valider_Demande_clicked();
@@ -79,14 +80,6 @@ private slots:
 
    void on_pushButton_7_clicked();
 
-   void on_pushButton_11_clicked();
-
-   void on_pushButton_12_clicked();
-
-
-   void on_pushButton_13_clicked();
-
-   void on_pushButton_14_clicked();
 
    void on_pushButton_15_clicked();
 
@@ -98,6 +91,10 @@ private slots:
 
    void on_commandLinkButton_theme_clicked();
 
+
+
+   void on_lab_anim_emp_linkActivated(int choice);
+
 private:
     Ui::MainWindow *ui;
          QSound *son;
@@ -108,6 +105,7 @@ private:
 
    int At,Dot;
    QString T;
+
 
 };
 #endif // MAINWINDOW_H
