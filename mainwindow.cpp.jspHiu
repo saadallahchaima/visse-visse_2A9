@@ -1,0 +1,105 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include<QFileDialog>
+#include<QTextDocument>
+#include<QTextStream>
+#include<QGraphicsView>
+#include<QtPrintSupport/QPrintDialog>
+#include<QPdfWriter>
+#include<QSqlQueryModel>
+#include<QSqlQuery>
+#include<QSystemTrayIcon>
+#include<QMediaPlayer>
+#include<QUrlQuery>
+#include<QJsonDocument>
+#include<QJsonObject>
+#include<QJsonArray>
+#include <QDate>
+#include <QTime>
+#include<QMessageBox>
+#include<QSqlTableModel>
+#include<QItemSelectionModel>
+#include<QTableWidgetItem>
+#include <QtPrintSupport/QPrinter>
+#include <QDesktopServices>
+#include <QSound>
+#include <QDesktopWidget>
+#include <QCoreApplication>
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    ui->setupUi(this);
+
+
+    ui->stackedWidget->setCurrentIndex(1);
+
+
+
+    son=new QSound("C:/Users/ASUS/Desktop/Integration Finale/ss.wav");
+
+    med = new QMediaPlayer(this);
+
+        connect(med , &QMediaPlayer::positionChanged, [&](qint64 pos){
+
+            ui->avancement_media->setValue(pos);
+
+        });
+
+        connect(med , &QMediaPlayer::durationChanged, [&](qint64 dur){
+
+            ui->avancement_media->setMaximum(dur);
+
+        });
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+
+void MainWindow::on_login_button_clicked()
+{
+
+        login l ;
+        QString cin;
+    QString nom_et_prenom=ui->le_nom_log->text();
+    QString login_p=ui->le_cin_log->text();
+
+     if((nom_et_prenom==("Admin")||("Employes"))&&(login_p==("Admin")||("Employes")))
+            {if(((nom_et_prenom=="Admin")&&(login_p=="Admin"))||((nom_et_prenom=="Employe")&&(login_p=="Employe")))
+         {
+         QMessageBox::information(nullptr,QObject::tr("ok"),
+                                 QObject::tr("vous etes trouvé \n"
+                                              "click cancel to exit."), QMessageBox::Cancel);
+         if(login_p=="Admin")
+
+
+
+
+        if(login_p=="Employe")
+        {
+            QMessageBox::information(nullptr,QObject::tr("ok"),
+                                    QObject::tr("BienVenue! \n"
+                                             "click cancel to exit."), QMessageBox::Cancel);ui->tabWidget->setCurrentIndex(3);
+
+
+        }
+             }else
+     {
+         QMessageBox::critical(nullptr,QObject::tr("not"),
+                                      QObject::tr("vous netes trouvé \n"
+                                                   "click cancel to exit."), QMessageBox::Cancel);
+
+
+
+}
+}
+}
+void MainWindow::on_Aymen_2_clicked()
+{
+     ui->tabWidget->setCurrentIndex(1);
+}

@@ -1,0 +1,49 @@
+<RCC>
+    <qresource prefix="/">
+        <file>img/273748291_4587502171372904_7310387823936526442_n.png</file>
+        <file>img/Adaptic.qss</file>
+        <file>img/add.png</file>
+        <file>img/ang.png</file>
+        <file>img/Awth.gif</file>
+        <file>img/click.mp3</file>
+        <file>img/click.wav</file>
+        <file>img/click2.wav</file>
+        <file>img/CLIPLY_372103860_CHECK_MARK_400px.gif</file>
+        <file>img/croi.png</file>
+        <file>img/Devsion.qss</file>
+        <file>img/Diplaytap.qss</file>
+        <file>img/emp.png</file>
+        <file>img/employe.png</file>
+        <file>img/fleche.png</file>
+        <file>img/france.png</file>
+        <file>img/hello.jpg</file>
+        <file>img/hello2.jpg</file>
+        <file>img/Hookmark.qss</file>
+        <file>img/icon.jpg</file>
+        <file>img/images (1).png</file>
+        <file>img/images.jpg</file>
+        <file>img/images.png</file>
+        <file>img/modifier.png</file>
+        <file>img/No Emoji GIF - No Emoji - Discover &amp; Share GIFs.gif</file>
+        <file>img/normal.qss</file>
+        <file>img/Obit.qss</file>
+        <file>img/PG23.gif</file>
+        <file>img/pngtree-three-office-workers-workerbusiness-character-design-png-image_590725.jpg</file>
+        <file>img/precedent.png</file>
+        <file>img/print.png</file>
+        <file>img/Quicksand-SemiBold.ttf</file>
+        <file>img/saint-valentin-quelles-fleurs-choisir-pour-dire-son-amour.jpeg</file>
+        <file>img/search.png</file>
+        <file>img/sort.png</file>
+        <file>img/stats.png</file>
+        <file>img/suivant.png</file>
+        <file>img/Toolery.qss</file>
+        <file>img/trash.png</file>
+        <file>img/téléchargement (1).png</file>
+        <file>img/téléchargement (2).png</file>
+        <file>img/téléchargement.png</file>
+        <file>img/valider.png</file>
+        <file>img/Vava Wright (@vavawrite3).gif</file>
+        <file>img/welcome-emoji.gif</file>
+    </qresource>
+</RCC>
