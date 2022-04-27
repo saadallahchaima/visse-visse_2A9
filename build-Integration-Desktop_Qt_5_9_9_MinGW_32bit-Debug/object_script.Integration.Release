@@ -1,0 +1,14 @@
+INPUT(
+./release\Ressources.o
+./release\congee.o
+./release\connection.o
+./release\demande_congee.o
+./release\employes.o
+./release\login.o
+./release\main.o
+./release\mainwindow.o
+./release\qcustomplot.o
+./release\qrc_Ressources.o
+./release\moc_mainwindow.o
+./release\moc_qcustomplot.o
+);

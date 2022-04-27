@@ -1,6 +1,8 @@
 QT       += core gui  sql charts serialport
 QT       += widgets multimedia
 QT       +=printsupport
+QT += axcontainer
+QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -18,22 +20,32 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Ressources.cpp \
+    arduino.cpp \
     congee.cpp \
     connection.cpp \
     demande_congee.cpp \
     employes.cpp \
+    excelexporthelper.cpp \
+    facture.cpp \
+    fournisseur.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
+    paiement.cpp \
     qcustomplot.cpp
 
 HEADERS += \
+    arduino.h \
     congee.h \
     connection.h \
     demande_congee.h \
     employes.h \
+    excelexporthelper.h \
+    facture.h \
+    fournisseur.h \
     login.h \
     mainwindow.h \
+    paiement.h \
     qcustomplot.h
 
 FORMS += \
